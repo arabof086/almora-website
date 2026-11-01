@@ -13,36 +13,42 @@
   <meta
     id="metaDescription"
     name="description"
-    content="ALMORA — Qubadan seçilmiş premium alma dadı. Təbiətin ən təmiz dadı, sevgi ilə yetişdirilir və qayğı ilə sizə çatdırılır."
+    content="ALMORA — Qubadan premium almalar. Sevgi ilə yetişdirilir, qayğı ilə sizə çatdırılır."
   >
 
   <meta name="theme-color" content="#140A0C">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="ALMORA — Bağımızdan sizə">
 
   <meta
     id="ogDescription"
     property="og:description"
-    content="Qubadan seçilmiş premium alma dadı."
+    content="ALMORA — Qubadan premium almalar."
   >
 
-  <meta property="og:image" content="assets/images/hero.jpg">
+  <meta
+    property="og:image"
+    content="assets/images/hero.jpg"
+  >
 
-  <!-- Fonts -->
+  <link
+    rel="preload"
+    as="image"
+    href="assets/images/hero.jpg"
+    fetchpriority="high"
+  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap&subset=cyrillic"
+    href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="style.css">
 
-
-  <!-- Local Business -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,51 +68,88 @@
       "longitude": 48.5551978
     },
     "sameAs": [
-      "https://www.instagram.com/almora.az/"
+      "https://instagram.com/almora.az"
     ]
   }
   </script>
 </head>
 
-
 <body>
 
+  <a
+    href="#home"
+    class="skip-link"
+  >
+    Skip to content
+  </a>
 
-  <!-- ==========================================
-       PRELOADER
-  =========================================== -->
 
-  <div class="preloader" id="preloader">
+  <!-- ===========================
+       LUXURY PRELOADER
+  ============================ -->
 
-    <div class="preloader-inner">
+  <div
+    class="preloader"
+    id="preloader"
+    aria-hidden="true"
+  >
 
-      <div class="loader-logo">
+    <div class="preloader-panel preloader-panel-left"></div>
+    <div class="preloader-panel preloader-panel-right"></div>
 
-        <svg
-          viewBox="0 0 100 110"
-          aria-hidden="true"
-        >
-          <path
-            class="loader-apple-outline"
-            d="M50 96C38 82 14 66 14 42C14 23 31 16 43 28C47 32 49 36 50 38C51 36 53 32 57 28C69 16 86 23 86 42C86 66 62 82 50 96Z"
+    <div class="preloader-content">
+
+      <svg
+        class="preloader-logo"
+        viewBox="0 0 100 110"
+      >
+
+        <defs>
+
+          <clipPath id="preloaderAppleClip">
+
+            <path
+              d="M50 96C38 82 14 66 14 42C14 23 31 16 43 28C47 32 49 36 50 38C51 36 53 32 57 28C69 16 86 23 86 42C86 66 62 82 50 96Z"
+            />
+
+          </clipPath>
+
+        </defs>
+
+        <path
+          class="preloader-outline"
+          d="M50 96C38 82 14 66 14 42C14 23 31 16 43 28C47 32 49 36 50 38C51 36 53 32 57 28C69 16 86 23 86 42C86 66 62 82 50 96Z"
+        />
+
+        <g clip-path="url(#preloaderAppleClip)">
+
+          <rect
+            id="preloaderLiquid"
+            class="preloader-liquid"
+            x="0"
+            y="110"
+            width="100"
+            height="110"
           />
 
-          <path
-            class="loader-leaf"
-            d="M52 18C57 5 70 3 77 7C72 17 63 23 52 18Z"
-          />
-        </svg>
+        </g>
 
-      </div>
+        <path
+          class="preloader-leaf"
+          d="M52 18C57 5 70 3 77 7C72 17 63 23 52 18Z"
+        />
 
+      </svg>
 
-      <div class="preloader-word">
+      <div class="preloader-wordmark">
         ALMORA
       </div>
 
-
-      <div class="preloader-line">
-        <span id="preloaderProgress"></span>
+      <div
+        class="preloader-percent"
+        id="preloaderPercent"
+      >
+        0
       </div>
 
     </div>
@@ -114,44 +157,56 @@
   </div>
 
 
+  <!-- ===========================
+       FIXED WEBGL
+  ============================ -->
 
-  <!-- ==========================================
-       CINEMATIC OVERLAYS
-  =========================================== -->
+  <div
+    class="global-webgl"
+    id="globalWebgl"
+    aria-hidden="true"
+  >
+    <canvas id="appleCanvas"></canvas>
+  </div>
+
+
+  <!-- ===========================
+       FILM EFFECTS
+  ============================ -->
 
   <div class="film-grain"></div>
-  <div class="global-vignette"></div>
+  <div class="page-vignette"></div>
 
 
-
-  <!-- ==========================================
-       CUSTOM CURSOR
-  =========================================== -->
+  <!-- ===========================
+       CURSOR
+  ============================ -->
 
   <div class="cursor-dot"></div>
 
   <div class="cursor-ring">
+
     <span data-i18n="cursorView">
       Bax
     </span>
+
   </div>
 
 
-
-  <!-- ==========================================
+  <!-- ===========================
        HEADER
-  =========================================== -->
+  ============================ -->
 
-  <header class="site-header" id="siteHeader">
+  <header
+    class="site-header"
+    id="siteHeader"
+  >
 
     <div class="header-inner">
 
-
-      <!-- LOGO -->
-
       <a
         href="#home"
-        class="brand-logo"
+        class="brand-logo magnetic"
         aria-label="ALMORA"
       >
 
@@ -160,6 +215,7 @@
           viewBox="0 0 100 110"
           aria-hidden="true"
         >
+
           <path
             d="M50 96C38 82 14 66 14 42C14 23 31 16 43 28C47 32 49 36 50 38C51 36 53 32 57 28C69 16 86 23 86 42C86 66 62 82 50 96Z"
           />
@@ -168,8 +224,8 @@
             class="brand-leaf"
             d="M52 18C57 5 70 3 77 7C72 17 63 23 52 18Z"
           />
-        </svg>
 
+        </svg>
 
         <span>
           ALMORA
@@ -178,52 +234,39 @@
       </a>
 
 
+      <nav
+        class="desktop-nav"
+        aria-label="Primary navigation"
+      >
 
-      <!-- NAVIGATION -->
-
-      <nav class="desktop-navigation">
-
-        <a
-          href="#story"
-          data-i18n="navStory"
-        >
+        <a href="#story" data-i18n="navStory">
           Hekayəmiz
         </a>
 
-
-        <a
-          href="#orchard"
-          data-i18n="navOrchard"
-        >
+        <a href="#orchard" data-i18n="navOrchard">
           Bağımız
         </a>
 
+        <a href="#people" data-i18n="navPeople">
+          İnsanlar
+        </a>
 
-        <a
-          href="#varieties"
-          data-i18n="navVarieties"
-        >
+        <a href="#varieties" data-i18n="navVarieties">
           Sortlarımız
         </a>
 
+        <a href="#premium" data-i18n="navPremium">
+          Premium
+        </a>
 
-        <a
-          href="#contact"
-          data-i18n="navContact"
-        >
+        <a href="#contact" data-i18n="navContact">
           Əlaqə
         </a>
 
       </nav>
 
 
-
-      <!-- RIGHT -->
-
       <div class="header-actions">
-
-
-        <!-- LANGUAGE -->
 
         <div
           class="language-switcher desktop-language"
@@ -238,7 +281,7 @@
             AZ
           </button>
 
-          <span>/</span>
+          <span>|</span>
 
           <button
             type="button"
@@ -248,7 +291,7 @@
             RU
           </button>
 
-          <span>/</span>
+          <span>|</span>
 
           <button
             type="button"
@@ -261,9 +304,6 @@
         </div>
 
 
-
-        <!-- CONTACT CTA -->
-
         <a
           href="#contact"
           class="header-cta magnetic"
@@ -273,17 +313,17 @@
         </a>
 
 
-
-        <!-- BURGER -->
-
         <button
           type="button"
           class="burger-button"
           id="burgerButton"
           aria-label="Open menu"
+          aria-expanded="false"
         >
+
           <span></span>
           <span></span>
+
         </button>
 
       </div>
@@ -293,62 +333,53 @@
   </header>
 
 
-
-  <!-- ==========================================
+  <!-- ===========================
        MOBILE MENU
-  =========================================== -->
+  ============================ -->
 
   <aside
     class="mobile-menu"
     id="mobileMenu"
+    aria-hidden="true"
   >
 
-    <div class="mobile-menu-background">
+    <div class="mobile-menu-watermark">
       ALMORA
     </div>
 
-
-    <div class="mobile-menu-content">
+    <div class="mobile-menu-inner">
 
       <nav>
 
-        <a
-          href="#home"
-          data-i18n="navHome"
-        >
+        <a href="#home" data-i18n="navHome">
           Ana səhifə
         </a>
 
-        <a
-          href="#story"
-          data-i18n="navStory"
-        >
+        <a href="#story" data-i18n="navStory">
           Hekayəmiz
         </a>
 
-        <a
-          href="#orchard"
-          data-i18n="navOrchard"
-        >
+        <a href="#orchard" data-i18n="navOrchard">
           Bağımız
         </a>
 
-        <a
-          href="#varieties"
-          data-i18n="navVarieties"
-        >
+        <a href="#people" data-i18n="navPeople">
+          İnsanlar
+        </a>
+
+        <a href="#varieties" data-i18n="navVarieties">
           Sortlarımız
         </a>
 
-        <a
-          href="#contact"
-          data-i18n="navContact"
-        >
+        <a href="#premium" data-i18n="navPremium">
+          Premium
+        </a>
+
+        <a href="#contact" data-i18n="navContact">
           Əlaqə
         </a>
 
       </nav>
-
 
 
       <div class="mobile-menu-bottom">
@@ -363,7 +394,7 @@
             AZ
           </button>
 
-          <span>/</span>
+          <span>|</span>
 
           <button
             type="button"
@@ -373,7 +404,7 @@
             RU
           </button>
 
-          <span>/</span>
+          <span>|</span>
 
           <button
             type="button"
@@ -385,13 +416,12 @@
 
         </div>
 
-
         <a
-          href="https://www.instagram.com/almora.az/"
+          href="https://instagram.com/almora.az"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Instagram ↗
+          @almora.az ↗
         </a>
 
       </div>
@@ -401,98 +431,99 @@
   </aside>
 
 
-
   <main>
 
-
-    <!-- ==========================================
-         01 — HERO
-    =========================================== -->
+    <!-- ===========================
+         HERO
+    ============================ -->
 
     <section
-      class="hero"
+      class="hero apple-zone"
       id="home"
     >
 
-
-      <!-- VIDEO -->
-
       <div class="hero-media">
+
+        <div class="hero-fallback"></div>
 
         <video
           class="hero-video"
-          autoplay
+          id="heroVideo"
           muted
+          autoplay
           loop
           playsinline
           preload="metadata"
           poster="assets/images/hero.jpg"
         >
+
           <source
-            src="assets/videos/brand-story.mp4"
+            data-src="assets/videos/brand-story.mp4"
             type="video/mp4"
           >
+
         </video>
 
-
-        <div class="hero-image-fallback"></div>
-
       </div>
-
-
-      <!-- OVERLAY -->
 
       <div class="hero-gradient"></div>
+      <div class="hero-vignette"></div>
 
-
-
-      <!-- THREE.JS -->
-
-      <div class="three-stage">
-        <canvas id="appleCanvas"></canvas>
-      </div>
-
-
-
-      <!-- LEAVES -->
+      <div class="light-leak light-leak-one"></div>
+      <div class="light-leak light-leak-two"></div>
 
       <div
-        class="hero-particles"
-        id="heroParticles"
-        aria-hidden="true"
+        class="hero-leaves"
+        id="heroLeaves"
       ></div>
 
-
-
-      <!-- CONTENT -->
 
       <div class="hero-inner">
 
         <div class="hero-copy">
 
-
-          <div
-            class="hero-eyebrow split-reveal"
+          <span
+            class="hero-eyebrow"
             data-i18n="heroEyebrow"
           >
             QUBA • AZƏRBAYCAN
-          </div>
+          </span>
 
 
-          <h1 class="hero-title">
+          <h1
+            class="hero-title"
+            aria-label="Bağımızdan sizə"
+          >
 
             <span
-              class="hero-title-main split-reveal"
+              class="hero-title-main"
+              id="heroMainTitle"
               data-i18n="heroTitleMain"
             >
               Bağımızdan
             </span>
 
-            <span
-              class="hero-title-script"
-              data-i18n="heroTitleScript"
-            >
-              sizə
+
+            <span class="hero-script-wrap">
+
+              <span
+                class="hero-title-script"
+                data-i18n="heroTitleScript"
+              >
+                sizə
+              </span>
+
+              <svg
+                class="script-draw"
+                viewBox="0 0 420 90"
+                aria-hidden="true"
+              >
+                <path
+                  id="scriptDrawPath"
+                  d="M12 60 C90 84, 136 17, 208 55 C270 89, 328 28, 407 42"
+                />
+              </svg>
+
             </span>
 
           </h1>
@@ -502,10 +533,10 @@
             class="hero-subtitle"
             data-i18n="heroSubtitle"
           >
-            Təbiətin ən təmiz dadı. Sevgi ilə yetişdirilir,
+            Təbiətin ən təmiz dadı.
+            Sevgi ilə yetişdirilir,
             qayğı ilə sizə çatdırılır.
           </p>
-
 
 
           <div class="hero-buttons">
@@ -514,11 +545,13 @@
               href="#varieties"
               class="button button-red magnetic"
             >
+
               <span data-i18n="heroProducts">
                 Məhsullarımızı kəşf et
               </span>
 
-              <i>↗</i>
+              <span>↗</span>
+
             </a>
 
 
@@ -526,36 +559,17 @@
               href="#story"
               class="button button-glass magnetic"
             >
+
               <span data-i18n="heroStory">
                 Hekayəmiz
               </span>
+
             </a>
 
           </div>
 
         </div>
 
-
-
-        <!-- SCROLL -->
-
-        <a
-          href="#marquee"
-          class="hero-scroll"
-        >
-
-          <span data-i18n="scroll">
-            Aşağı
-          </span>
-
-          <div class="hero-scroll-line">
-            <i></i>
-          </div>
-
-        </a>
-
-
-        <!-- COORDINATES -->
 
         <div class="hero-coordinates">
 
@@ -569,15 +583,28 @@
 
         </div>
 
+
+        <a
+          href="#marquee"
+          class="hero-scroll"
+        >
+
+          <span data-i18n="scroll">
+            Aşağı
+          </span>
+
+          <span class="apple-seed"></span>
+
+        </a>
+
       </div>
 
     </section>
 
 
-
-    <!-- ==========================================
-         02 — MARQUEE
-    =========================================== -->
+    <!-- ===========================
+         MARQUEE
+    ============================ -->
 
     <section
       class="marquee-section"
@@ -586,23 +613,19 @@
 
       <div class="marquee-track">
 
-
         <div
-          class="marquee-content"
+          class="marquee-copy"
           data-i18n="marquee"
         >
-          TƏZƏ • TƏBİİ • SEVGİ İLƏ • NƏSİLDƏN NƏSLƏ •
-          PREMIUM KEYFİYYƏT •
+          TƏZƏ • TƏBİİ • SEVGİ İLƏ • NƏSİLDƏN NƏSLƏ • PREMIUM KEYFİYYƏT •
         </div>
 
-
         <div
-          class="marquee-content"
+          class="marquee-copy"
           data-i18n="marquee"
           aria-hidden="true"
         >
-          TƏZƏ • TƏBİİ • SEVGİ İLƏ • NƏSİLDƏN NƏSLƏ •
-          PREMIUM KEYFİYYƏT •
+          TƏZƏ • TƏBİİ • SEVGİ İLƏ • NƏSİLDƏN NƏSLƏ • PREMIUM KEYFİYYƏT •
         </div>
 
       </div>
@@ -610,56 +633,52 @@
     </section>
 
 
-
-    <!-- ==========================================
-         03 — STORY
-    =========================================== -->
+    <!-- ===========================
+         STORY
+    ============================ -->
 
     <section
-      class="story-section section"
+      class="story-section apple-zone"
       id="story"
     >
 
-      <div class="page-shell story-layout">
-
-
-        <!-- IMAGE -->
+      <div class="story-sticky page-shell">
 
         <div
-          class="story-visual image-hover"
-          data-cursor="view"
+          class="story-visual image-hover velocity-image"
         >
 
-          <div class="gold-frame"></div>
+          <div class="story-gold-frame"></div>
 
-          <div class="image-reveal">
+          <picture class="story-picture">
 
             <img
               src="assets/images/heritage-poster.jpg"
-              alt="ALMORA orchard story"
+              data-fallback="assets/images/hero.jpg"
+              alt="ALMORA family orchard story"
+              data-i18n-alt="altStory"
+              width="1200"
+              height="1500"
               loading="lazy"
             >
 
-          </div>
+          </picture>
 
         </div>
 
 
-
-        <!-- TEXT -->
-
         <div class="story-copy">
 
-          <div
-            class="section-number"
+          <span
+            class="section-label"
             data-i18n="storyNumber"
           >
             01 — HEKAYƏMİZ
-          </div>
+          </span>
 
 
           <h2
-            class="section-title split-reveal"
+            class="section-title"
             data-i18n="storyTitle"
           >
             Sevgi qayğı ilə ötürülür,
@@ -667,36 +686,54 @@
           </h2>
 
 
-          <p
-            class="story-lead"
-            data-i18n="storyLead"
+          <div class="story-lines">
+
+            <p
+              class="story-line"
+              data-i18n="storyLine1"
+            >
+              Bəzi şeylər öyrədilmir.
+              Onlar yaşanır.
+            </p>
+
+            <p
+              class="story-line"
+              data-i18n="storyLine2"
+            >
+              Torpağa hörmət hər mövsüm
+              yenidən başlayır.
+            </p>
+
+            <p
+              class="story-line"
+              data-i18n="storyLine3"
+            >
+              Hər meyvə səbir və qayğı
+              ilə seçilir.
+            </p>
+
+            <p
+              class="story-line"
+              data-i18n="storyLine4"
+            >
+              Hər alma özündə bir xatirə daşıyır.
+            </p>
+
+          </div>
+
+
+          <svg
+            class="story-path"
+            viewBox="0 0 120 440"
+            aria-hidden="true"
           >
-            Bəzi şeylər öyrədilmir. Onlar yaşanır.
-          </p>
 
+            <path
+              id="storyGoldPath"
+              d="M55 10 C15 95, 102 145, 45 220 C10 280, 103 342, 58 430"
+            />
 
-          <p
-            class="story-text"
-            data-i18n="storyText"
-          >
-            Torpağa hörmət, məhsula qayğı və hər mövsüm yenidən
-            başlayan səbir. ALMORA üçün alma sadəcə meyvə deyil —
-            bağla insan arasında illərlə qurulan bir bağdır.
-          </p>
-
-
-          <a
-            href="#orchard"
-            class="text-link magnetic"
-          >
-
-            <span data-i18n="storyButton">
-              Bağımızı kəşf et
-            </span>
-
-            <i>↗</i>
-
-          </a>
+          </svg>
 
         </div>
 
@@ -705,10 +742,9 @@
     </section>
 
 
-
-    <!-- ==========================================
-         04 — ORCHARD / HORIZONTAL
-    =========================================== -->
+    <!-- ===========================
+         ORCHARD
+    ============================ -->
 
     <section
       class="orchard-section"
@@ -717,21 +753,17 @@
 
       <div class="orchard-sticky">
 
-
-        <!-- INTRO -->
-
         <div class="orchard-heading page-shell">
 
-          <div
-            class="section-number light"
+          <span
+            class="section-label light"
             data-i18n="orchardNumber"
           >
             02 — BAĞIMIZ
-          </div>
-
+          </span>
 
           <h2
-            class="section-title light split-reveal"
+            class="section-title light"
             data-i18n="orchardTitle"
           >
             Hər şey torpaqdan başlayır.
@@ -740,31 +772,28 @@
         </div>
 
 
-
-        <!-- HORIZONTAL TRACK -->
-
         <div
           class="orchard-track"
           id="orchardTrack"
         >
 
 
-          <!-- CARD 1 -->
-
           <article class="orchard-panel">
 
-            <div class="orchard-panel-image image-hover">
+            <div class="orchard-image image-hover velocity-image">
 
               <img
                 src="assets/images/harvest-back.jpg"
                 alt="ALMORA orchard"
+                data-i18n-alt="altOrchard1"
+                width="1600"
+                height="1200"
                 loading="lazy"
               >
 
             </div>
 
-
-            <div class="orchard-panel-copy">
+            <div class="orchard-copy">
 
               <span class="outline-number">
                 01
@@ -783,23 +812,22 @@
           </article>
 
 
-
-          <!-- CARD 2 -->
-
           <article class="orchard-panel">
 
-            <div class="orchard-panel-image image-hover">
+            <div class="orchard-image image-hover velocity-image">
 
               <img
                 src="assets/images/harvest-workers.jpg"
-                alt="ALMORA harvest"
+                alt="ALMORA harvest workers"
+                data-i18n-alt="altOrchard2"
+                width="1600"
+                height="1200"
                 loading="lazy"
               >
 
             </div>
 
-
-            <div class="orchard-panel-copy">
+            <div class="orchard-copy">
 
               <span class="outline-number">
                 02
@@ -810,7 +838,7 @@
               </h3>
 
               <p data-i18n="orchardCard2Text">
-                Hər alma diqqətlə, yetişdiyi anda seçilir.
+                Hər alma yetişdiyi anda diqqətlə seçilir.
               </p>
 
             </div>
@@ -818,23 +846,22 @@
           </article>
 
 
-
-          <!-- CARD 3 -->
-
           <article class="orchard-panel">
 
-            <div class="orchard-panel-image image-hover">
+            <div class="orchard-image image-hover velocity-image">
 
               <img
                 src="assets/images/woman-crate.jpg"
                 alt="ALMORA apple harvest"
+                data-i18n-alt="altOrchard3"
+                width="1600"
+                height="1200"
                 loading="lazy"
               >
 
             </div>
 
-
-            <div class="orchard-panel-copy">
+            <div class="orchard-copy">
 
               <span class="outline-number">
                 03
@@ -845,7 +872,8 @@
               </h3>
 
               <p data-i18n="orchardCard3Text">
-                Yığım son deyil. Keyfiyyətin davamıdır.
+                Yığım son deyil.
+                Keyfiyyətin davamıdır.
               </p>
 
             </div>
@@ -859,10 +887,9 @@
     </section>
 
 
-
-    <!-- ==========================================
-         05 — PEOPLE
-    =========================================== -->
+    <!-- ===========================
+         PEOPLE
+    ============================ -->
 
     <section
       class="people-section section"
@@ -871,21 +898,19 @@
 
       <div class="page-shell">
 
-
         <div class="people-heading">
 
           <div>
 
-            <div
-              class="section-number"
+            <span
+              class="section-label"
               data-i18n="peopleNumber"
             >
               03 — ƏLLƏRİN ZƏHMƏTİ
-            </div>
-
+            </span>
 
             <h2
-              class="section-title split-reveal"
+              class="section-title"
               data-i18n="peopleTitle"
             >
               Bir mövsümün arxasında insanlar var.
@@ -893,75 +918,71 @@
 
           </div>
 
-
           <p data-i18n="peopleIntro">
-            Hər meyvəyə toxunan əllər, hər ağaca ayrılan vaxt,
+            Hər meyvəyə toxunan əllər,
+            hər ağaca ayrılan vaxt,
             hər gün təkrarlanan qayğı.
           </p>
 
         </div>
 
 
-
-        <!-- HERO PEOPLE IMAGE -->
-
-        <div class="people-image image-hover">
+        <div class="people-image image-hover velocity-image">
 
           <img
             src="assets/images/team-tractor.jpg"
-            alt="ALMORA harvest team"
+            alt="ALMORA team"
+            data-i18n-alt="altPeople"
+            width="1600"
+            height="1000"
             loading="lazy"
           >
 
-          <div class="people-image-overlay"></div>
+          <div class="people-overlay"></div>
 
-
-          <div class="people-image-caption">
-
-            <span data-i18n="peopleCaption">
-              ALMORA komandası • Quba
-            </span>
-
-          </div>
+          <span data-i18n="peopleCaption">
+            ALMORA komandası • Quba
+          </span>
 
         </div>
 
 
-
-        <!-- COUNTERS -->
-
         <div class="counter-grid">
-
 
           <div class="counter-item">
 
-            <strong
-              class="counter-number"
-              data-count="100"
-            >
-              0
-            </strong>
+            <div class="counter-number-row">
 
-            <span>%</span>
+              <strong
+                class="counter-number"
+                data-count="100"
+              >
+                0
+              </strong>
+
+              <span>%</span>
+
+            </div>
 
             <p data-i18n="counter1">
-              diqqətli seçim
+              əl ilə seçim
             </p>
 
           </div>
 
 
-
           <div class="counter-item">
 
-            <strong
-              class="counter-number"
-              data-count="3"
-            >
-              0
-            </strong>
+            <div class="counter-number-row">
 
-            <span>+</span>
+              <strong
+                class="counter-number"
+                data-count="3"
+              >
+                0
+              </strong>
+
+            </div>
 
             <p data-i18n="counter2">
               nəsil qayğı
@@ -970,17 +991,18 @@
           </div>
 
 
-
           <div class="counter-item">
 
-            <strong
-              class="counter-number"
-              data-count="365"
-            >
-              0
-            </strong>
+            <div class="counter-number-row">
 
-            <span></span>
+              <strong
+                class="counter-number"
+                data-count="365"
+              >
+                0
+              </strong>
+
+            </div>
 
             <p data-i18n="counter3">
               gün diqqət
@@ -995,79 +1017,65 @@
     </section>
 
 
-
-    <!-- ==========================================
-         06 — VARIETIES
-    =========================================== -->
+    <!-- ===========================
+         VARIETIES
+    ============================ -->
 
     <section
-      class="varieties-section section"
+      class="varieties-section section apple-zone"
       id="varieties"
     >
 
       <div class="page-shell">
 
+        <span
+          class="section-label"
+          data-i18n="varietiesNumber"
+        >
+          04 — SORTLARIMIZ
+        </span>
 
-        <div class="varieties-heading">
-
-          <div
-            class="section-number"
-            data-i18n="varietiesNumber"
-          >
-            04 — SORTLARIMIZ
-          </div>
-
-
-          <h2
-            class="section-title split-reveal"
-            data-i18n="varietiesTitle"
-          >
-            Hər rəngin öz xarakteri var.
-          </h2>
-
-        </div>
-
+        <h2
+          class="section-title varieties-title"
+          data-i18n="varietiesTitle"
+        >
+          Hər rəngin öz xarakteri var.
+        </h2>
 
 
         <div class="varieties-grid">
 
 
-          <!-- FUJI -->
-
           <article
-            class="variety-card tilt-card"
+            class="variety-card product-card"
+            data-apple-color="#B3202F"
           >
 
-            <div class="variety-image">
+            <div class="card-glare"></div>
+            <div class="slice-apple slice-red"></div>
+
+            <div class="variety-image image-hover">
 
               <img
                 src="assets/images/fuji.jpg"
-                alt="Fuji apple"
+                alt="ALMORA Fuji apple"
+                data-i18n-alt="altFuji"
+                width="1200"
+                height="1500"
                 loading="lazy"
               >
 
             </div>
 
+            <div class="variety-copy">
 
-            <div class="variety-content">
-
-              <div class="variety-top">
-
-                <span>
-                  01
-                </span>
-
-                <small>
-                  ALMORA SELECT
-                </small>
-
-              </div>
-
+              <small>
+                01 • ALMORA SELECT
+              </small>
 
               <h3>
                 Fuji
               </h3>
-
 
               <div class="taste-tags">
 
@@ -1085,48 +1093,82 @@
 
               </div>
 
+
+              <div class="taste-bars">
+
+                <div class="taste-row">
+
+                  <span data-i18n="sweetness">
+                    Şirinlik
+                  </span>
+
+                  <div class="taste-bar">
+                    <i style="--taste:92%"></i>
+                  </div>
+
+                </div>
+
+                <div class="taste-row">
+
+                  <span data-i18n="acidity">
+                    Turşuluq
+                  </span>
+
+                  <div class="taste-bar">
+                    <i style="--taste:34%"></i>
+                  </div>
+
+                </div>
+
+                <div class="taste-row">
+
+                  <span data-i18n="crunch">
+                    Xırtıltı
+                  </span>
+
+                  <div class="taste-bar">
+                    <i style="--taste:89%"></i>
+                  </div>
+
+                </div>
+
+              </div>
+
             </div>
 
           </article>
 
 
-
-          <!-- GRANNY -->
-
           <article
-            class="variety-card tilt-card"
+            class="variety-card product-card"
+            data-apple-color="#72A63D"
           >
 
-            <div class="variety-image">
+            <div class="card-glare"></div>
+            <div class="slice-apple slice-green"></div>
+
+            <div class="variety-image image-hover">
 
               <img
                 src="assets/images/granny-smith.jpg"
-                alt="Granny Smith apple"
+                alt="ALMORA Granny Smith apple"
+                data-i18n-alt="altGranny"
+                width="1200"
+                height="1500"
                 loading="lazy"
               >
 
             </div>
 
+            <div class="variety-copy">
 
-            <div class="variety-content">
-
-              <div class="variety-top">
-
-                <span>
-                  02
-                </span>
-
-                <small>
-                  ALMORA FRESH
-                </small>
-
-              </div>
-
+              <small>
+                02 • ALMORA FRESH
+              </small>
 
               <h3>
                 Granny Smith
               </h3>
-
 
               <div class="taste-tags">
 
@@ -1144,48 +1186,82 @@
 
               </div>
 
+
+              <div class="taste-bars">
+
+                <div class="taste-row">
+
+                  <span data-i18n="sweetness">
+                    Şirinlik
+                  </span>
+
+                  <div class="taste-bar">
+                    <i style="--taste:46%"></i>
+                  </div>
+
+                </div>
+
+                <div class="taste-row">
+
+                  <span data-i18n="acidity">
+                    Turşuluq
+                  </span>
+
+                  <div class="taste-bar">
+                    <i style="--taste:92%"></i>
+                  </div>
+
+                </div>
+
+                <div class="taste-row">
+
+                  <span data-i18n="crunch">
+                    Xırtıltı
+                  </span>
+
+                  <div class="taste-bar">
+                    <i style="--taste:96%"></i>
+                  </div>
+
+                </div>
+
+              </div>
+
             </div>
 
           </article>
 
 
-
-          <!-- GOLDEN -->
-
           <article
-            class="variety-card tilt-card"
+            class="variety-card product-card"
+            data-apple-color="#D8AB37"
           >
 
-            <div class="variety-image">
+            <div class="card-glare"></div>
+            <div class="slice-apple slice-gold"></div>
+
+            <div class="variety-image image-hover">
 
               <img
                 src="assets/images/golden-delicious.jpg"
-                alt="Golden Delicious apple"
+                alt="ALMORA Golden Delicious apple"
+                data-i18n-alt="altGolden"
+                width="1200"
+                height="1500"
                 loading="lazy"
               >
 
             </div>
 
+            <div class="variety-copy">
 
-            <div class="variety-content">
-
-              <div class="variety-top">
-
-                <span>
-                  03
-                </span>
-
-                <small>
-                  ALMORA GOLD
-                </small>
-
-              </div>
-
+              <small>
+                03 • ALMORA GOLD
+              </small>
 
               <h3>
                 Golden Delicious
               </h3>
-
 
               <div class="taste-tags">
 
@@ -1203,6 +1279,47 @@
 
               </div>
 
+
+              <div class="taste-bars">
+
+                <div class="taste-row">
+
+                  <span data-i18n="sweetness">
+                    Şirinlik
+                  </span>
+
+                  <div class="taste-bar">
+                    <i style="--taste:86%"></i>
+                  </div>
+
+                </div>
+
+                <div class="taste-row">
+
+                  <span data-i18n="acidity">
+                    Turşuluq
+                  </span>
+
+                  <div class="taste-bar">
+                    <i style="--taste:40%"></i>
+                  </div>
+
+                </div>
+
+                <div class="taste-row">
+
+                  <span data-i18n="crunch">
+                    Xırtıltı
+                  </span>
+
+                  <div class="taste-bar">
+                    <i style="--taste:78%"></i>
+                  </div>
+
+                </div>
+
+              </div>
+
             </div>
 
           </article>
@@ -1214,42 +1331,55 @@
     </section>
 
 
-
-    <!-- ==========================================
-         07 — PREMIUM / GIFT
-    =========================================== -->
+    <!-- ===========================
+         PREMIUM
+    ============================ -->
 
     <section
-      class="premium-section"
+      class="premium-section apple-zone"
       id="premium"
     >
 
-      <div class="premium-background">
-
-        <img
-          src="assets/images/premium-apples.jpg"
-          alt="Premium ALMORA apples"
-          loading="lazy"
-        >
-
-      </div>
-
+      <img
+        class="premium-background velocity-image"
+        src="assets/images/premium-apples.jpg"
+        alt="ALMORA premium apples"
+        data-i18n-alt="altPremium"
+        width="1600"
+        height="1200"
+        loading="lazy"
+      >
 
       <div class="premium-overlay"></div>
 
+      <div
+        class="premium-spotlight"
+        id="premiumSpotlight"
+      ></div>
 
-      <div class="premium-ribbon"></div>
+
+      <svg
+        class="premium-ribbon"
+        viewBox="0 0 1200 800"
+        aria-hidden="true"
+      >
+
+        <path
+          id="premiumRibbonPath"
+          d="M-100 620 C180 270, 340 760, 590 400 C790 110, 920 510, 1300 100"
+        />
+
+      </svg>
 
 
-      <div class="page-shell premium-content">
+      <div class="page-shell premium-copy">
 
-        <div
-          class="section-number gold"
+        <span
+          class="section-label gold"
           data-i18n="premiumNumber"
         >
-          05 — ALMORA SELECT
-        </div>
-
+          05 — PREMIUM HƏDİYYƏ
+        </span>
 
         <p
           class="premium-script"
@@ -1258,23 +1388,13 @@
           xüsusi anlar üçün
         </p>
 
-
-        <h2
-          class="premium-title split-reveal"
-          data-i18n="premiumTitle"
-        >
-          Hər alma —
-          bir hədiyyə.
+        <h2 data-i18n="premiumTitle">
+          Hər alma — bir hədiyyə.
         </h2>
 
-
-        <p
-          class="premium-description"
-          data-i18n="premiumText"
-        >
-          Təbiətin sadəliyini premium təqdimatda hiss edin.
+        <p data-i18n="premiumText">
+          Təbiətin sadəliyi premium təqdimatda.
         </p>
-
 
         <a
           href="#contact"
@@ -1285,7 +1405,7 @@
             Bizimlə əlaqə
           </span>
 
-          <i>↗</i>
+          <span>↗</span>
 
         </a>
 
@@ -1294,10 +1414,9 @@
     </section>
 
 
-
-    <!-- ==========================================
-         08 — QUOTE
-    =========================================== -->
+    <!-- ===========================
+         QUOTE
+    ============================ -->
 
     <section class="quote-section">
 
@@ -1316,46 +1435,44 @@
     </section>
 
 
-
-    <!-- ==========================================
-         09 — CHILDHOOD
-    =========================================== -->
+    <!-- ===========================
+         CHILDHOOD
+    ============================ -->
 
     <section class="childhood-section">
 
-      <div class="childhood-image image-hover">
+      <img
+        class="childhood-background velocity-image"
+        src="assets/images/child-apple.jpg"
+        alt="Child enjoying an ALMORA apple"
+        data-i18n-alt="altChild"
+        width="1600"
+        height="1200"
+        loading="lazy"
+      >
 
-        <img
-          src="assets/images/child-apple.jpg"
-          alt="Child enjoying ALMORA apple"
-          loading="lazy"
-        >
-
-        <div class="childhood-glow"></div>
-
-      </div>
-
+      <div class="childhood-overlay"></div>
 
       <div class="page-shell childhood-copy">
 
-        <div
-          class="section-number light"
+        <span
+          class="section-label light"
           data-i18n="childhoodNumber"
         >
           06 — UŞAQLIQ DADI
-        </div>
-
+        </span>
 
         <h2
-          class="section-title light split-reveal"
+          class="section-title light"
           data-i18n="childhoodTitle"
         >
           Bəzi dadlar heç vaxt unudulmur.
         </h2>
 
-
         <p data-i18n="childhoodText">
-          Bir dişləmə. Bir yay günü. Bir xatirə.
+          Bir dişləmə.
+          Bir yay günü.
+          Bir xatirə.
         </p>
 
       </div>
@@ -1363,30 +1480,28 @@
     </section>
 
 
+    <!-- ===========================
+         FARM TO YOU
+    ============================ -->
 
-    <!-- ==========================================
-         10 — FARM TO YOU BANNER
-    =========================================== -->
+    <section class="farm-section">
 
-    <section class="farm-to-you-section">
-
-      <div class="farm-to-you-visual">
-
-        <img
-          src="assets/images/farm-to-table.png"
-          alt="Bağımızdan sizə"
-          loading="lazy"
-        >
-
-      </div>
+      <img
+        class="velocity-image"
+        src="assets/images/farm-to-table.png"
+        alt="ALMORA Bağımızdan sizə"
+        data-i18n-alt="altFarm"
+        width="1600"
+        height="1000"
+        loading="lazy"
+      >
 
     </section>
 
 
-
-    <!-- ==========================================
-         11 — CONTACT
-    =========================================== -->
+    <!-- ===========================
+         CONTACT
+    ============================ -->
 
     <section
       class="contact-section section"
@@ -1395,66 +1510,46 @@
 
       <div class="page-shell">
 
+        <span
+          class="section-label"
+          data-i18n="contactNumber"
+        >
+          07 — ƏLAQƏ
+        </span>
 
-        <!-- HEADING -->
+        <h2
+          class="section-title contact-title"
+          data-i18n="contactTitle"
+        >
+          Bağımızdan sizə.
+        </h2>
 
-        <div class="contact-heading">
-
-          <div
-            class="section-number"
-            data-i18n="contactNumber"
-          >
-            07 — ƏLAQƏ
-          </div>
-
-
-          <h2
-            class="section-title split-reveal"
-            data-i18n="contactTitle"
-          >
-            Bağımızdan sizə.
-          </h2>
-
-
-          <p data-i18n="contactIntro">
-            ALMORA ilə əlaqə saxlayın.
-          </p>
-
-        </div>
+        <p
+          class="contact-intro"
+          data-i18n="contactIntro"
+        >
+          ALMORA ilə əlaqə saxlayın.
+        </p>
 
 
-
-        <div class="contact-grid">
-
-
-          <!-- LEFT -->
+        <div class="contact-layout">
 
           <div class="contact-information">
 
 
-            <!-- ADDRESS -->
-
             <article class="contact-card">
 
-              <div class="contact-icon">
-
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 21s7-6.1 7-12A7 7 0 1 0 5 9c0 5.9 7 12 7 12Z"
-                  />
-                  <circle cx="12" cy="9" r="2.3"/>
-                </svg>
-
-              </div>
-
+              <span class="contact-icon">
+                ⌖
+              </span>
 
               <div>
 
-                <small data-i18n="contactAddressLabel">
+                <small data-i18n="addressLabel">
                   Ünvan
                 </small>
 
-                <strong data-i18n="contactAddress">
+                <strong data-i18n="address">
                   Aşağı Atuc, Quba, Azərbaycan
                 </strong>
 
@@ -1463,25 +1558,15 @@
             </article>
 
 
-
-            <!-- PHONE -->
-
             <article class="contact-card">
 
-              <div class="contact-icon">
-
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M7 3h3l1.5 4-2 1.5a15 15 0 0 0 6 6l1.5-2L21 14v3c0 2-1.5 4-4 4C9.3 21 3 14.7 3 7c0-2.5 2-4 4-4Z"
-                  />
-                </svg>
-
-              </div>
-
+              <span class="contact-icon">
+                ☎
+              </span>
 
               <div>
 
-                <small data-i18n="contactPhoneLabel">
+                <small data-i18n="phoneLabel">
                   Telefon
                 </small>
 
@@ -1494,27 +1579,11 @@
             </article>
 
 
-
-            <!-- INSTAGRAM -->
-
             <article class="contact-card">
 
-              <div class="contact-icon">
-
-                <svg viewBox="0 0 24 24">
-                  <rect
-                    x="3"
-                    y="3"
-                    width="18"
-                    height="18"
-                    rx="5"
-                  />
-                  <circle cx="12" cy="12" r="4"/>
-                  <circle cx="17.5" cy="6.5" r="1"/>
-                </svg>
-
-              </div>
-
+              <span class="contact-icon">
+                ◎
+              </span>
 
               <div>
 
@@ -1523,7 +1592,7 @@
                 </small>
 
                 <a
-                  href="https://www.instagram.com/almora.az/"
+                  href="https://instagram.com/almora.az"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -1535,29 +1604,20 @@
             </article>
 
 
-
-            <!-- HOURS -->
-
             <article class="contact-card">
 
-              <div class="contact-icon">
-
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="9"/>
-                  <path d="M12 7v6l4 2"/>
-                </svg>
-
-              </div>
-
+              <span class="contact-icon">
+                ◷
+              </span>
 
               <div>
 
-                <small data-i18n="contactHoursLabel">
-                  Əlaqə vaxtı
+                <small data-i18n="hoursLabel">
+                  İş saatları
                 </small>
 
-                <strong data-i18n="contactHours">
-                  Əvvəlcədən əlaqə saxlayın
+                <strong data-i18n="hours">
+                  Hər gün 09:00–18:00
                 </strong>
 
               </div>
@@ -1565,29 +1625,23 @@
             </article>
 
 
-
-            <!-- WHATSAPP -->
-
             <a
               href="https://wa.me/994557525353"
               target="_blank"
               rel="noopener noreferrer"
-              class="button button-whatsapp magnetic"
+              class="button whatsapp-button magnetic"
             >
 
-              <span data-i18n="whatsappButton">
+              <span data-i18n="whatsapp">
                 WhatsApp ilə yaz
               </span>
 
-              <i>↗</i>
+              <span>↗</span>
 
             </a>
 
           </div>
 
-
-
-          <!-- FORM -->
 
           <form
             class="contact-form"
@@ -1608,12 +1662,12 @@
                 name="name"
                 type="text"
                 required
-                data-i18n-placeholder="formNamePlaceholder"
+                autocomplete="name"
                 placeholder="Adınızı yazın"
+                data-i18n-placeholder="formNamePlaceholder"
               >
 
             </div>
-
 
 
             <div class="form-group">
@@ -1630,12 +1684,12 @@
                 name="phone"
                 type="tel"
                 required
-                data-i18n-placeholder="formPhonePlaceholder"
+                autocomplete="tel"
                 placeholder="+994"
+                data-i18n-placeholder="formPhonePlaceholder"
               >
 
             </div>
-
 
 
             <div class="form-group">
@@ -1651,24 +1705,23 @@
                 id="message"
                 name="message"
                 rows="5"
-                data-i18n-placeholder="formMessagePlaceholder"
                 placeholder="Mesajınızı yazın"
+                data-i18n-placeholder="formMessagePlaceholder"
               ></textarea>
 
             </div>
 
 
-
             <button
               type="submit"
-              class="button button-red form-submit magnetic"
+              class="button button-red magnetic"
             >
 
               <span data-i18n="formSubmit">
                 Mesaj göndər
               </span>
 
-              <i>↗</i>
+              <span>↗</span>
 
             </button>
 
@@ -1677,10 +1730,7 @@
         </div>
 
 
-
-        <!-- MAP -->
-
-        <div class="map-block">
+        <div class="map-wrapper">
 
           <iframe
             title="ALMORA location"
@@ -1688,19 +1738,18 @@
             src="https://www.google.com/maps?q=41.4593543,48.5551978&z=14&output=embed"
           ></iframe>
 
-
           <a
             href="https://www.google.com/maps?q=41.4593543,48.5551978"
             target="_blank"
             rel="noopener noreferrer"
-            class="map-direction-button magnetic"
+            class="map-button magnetic"
           >
 
             <span data-i18n="directions">
               Yol tarifi
             </span>
 
-            <i>↗</i>
+            <span>↗</span>
 
           </a>
 
@@ -1713,38 +1762,32 @@
   </main>
 
 
-
-  <!-- ==========================================
+  <!-- ===========================
        FOOTER
-  =========================================== -->
+  ============================ -->
 
   <footer class="site-footer">
 
     <div class="page-shell">
-
 
       <div class="footer-wordmark">
         ALMORA
       </div>
 
 
+      <div class="footer-grid">
 
-      <div class="footer-main">
-
-
-        <div class="footer-tagline">
-
-          <span data-i18n="footerTagline">
-            Bağımızdan sizə
-          </span>
-
+        <div
+          class="footer-tagline"
+          data-i18n="footerTagline"
+        >
+          Bağımızdan sizə
         </div>
 
 
+        <div class="footer-info">
 
-        <div class="footer-contact">
-
-          <p data-i18n="contactAddress">
+          <p data-i18n="address">
             Aşağı Atuc, Quba, Azərbaycan
           </p>
 
@@ -1752,59 +1795,63 @@
             +994 55 752 53 53
           </a>
 
-        </div>
-
-
-
-        <div class="footer-socials">
-
           <a
-            href="https://www.instagram.com/almora.az/"
+            href="https://instagram.com/almora.az"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Instagram"
           >
-
-            <svg viewBox="0 0 24 24">
-              <rect
-                x="3"
-                y="3"
-                width="18"
-                height="18"
-                rx="5"
-              />
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.5" cy="6.5" r="1"/>
-            </svg>
-
+            @almora.az
           </a>
 
         </div>
 
-      </div>
 
+        <a
+          href="https://instagram.com/almora.az"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-instagram"
+          aria-label="Instagram"
+        >
+
+          <svg viewBox="0 0 24 24">
+
+            <rect
+              x="3"
+              y="3"
+              width="18"
+              height="18"
+              rx="5"
+            />
+
+            <circle
+              cx="12"
+              cy="12"
+              r="4"
+            />
+
+            <circle
+              cx="17.5"
+              cy="6.5"
+              r="1"
+            />
+
+          </svg>
+
+        </a>
+
+      </div>
 
 
       <div class="footer-bottom">
 
-        <span
-          data-i18n="copyright"
-        >
+        <span data-i18n="copyright">
           © 2026 ALMORA. Bütün hüquqlar qorunur.
         </span>
 
-
-        <div class="footer-coordinates">
-
-          <span>
-            41.459354° N
-          </span>
-
-          <span>
-            48.555198° E
-          </span>
-
-        </div>
+        <span>
+          41.459354° N • 48.555198° E
+        </span>
 
       </div>
 
@@ -1813,10 +1860,9 @@
   </footer>
 
 
-
-  <!-- ==========================================
-       FLOATING WHATSAPP
-  =========================================== -->
+  <!-- ===========================
+       WHATSAPP
+  ============================ -->
 
   <a
     href="https://wa.me/994557525353"
@@ -1825,57 +1871,42 @@
     class="floating-whatsapp"
     aria-label="WhatsApp"
   >
-
-    <svg viewBox="0 0 24 24">
-
-      <path
-        d="M20 11.7A8 8 0 0 1 8.2 18.8L4 20l1.2-4A8 8 0 1 1 20 11.7Z"
-      />
-
-      <path
-        d="M8.3 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.4l.8 2c.1.3.1.5-.1.7l-.6.7c-.2.2-.2.4 0 .7a7 7 0 0 0 3.2 2.8c.3.2.5.1.7-.1l.8-1c.2-.3.5-.3.7-.2l2 .9c.3.1.4.3.4.5a3 3 0 0 1-.5 1.5c-.4.6-1.2 1-2 1a9.6 9.6 0 0 1-4.5-1.5 10.7 10.7 0 0 1-4-4.3c-.6-1.2-.6-2.4-.1-3.2Z"
-      />
-
-    </svg>
-
+    W
   </a>
 
 
-
-  <!-- ==========================================
+  <!-- ===========================
        LIBRARIES
-  =========================================== -->
+  ============================ -->
 
-  <!-- GSAP -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-  <!-- Three.js -->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/environments/RoomEnvironment.js"></script>
 
-  <!-- Lenis -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
-
-  <!-- SplitType -->
-  <script
-    src="https://unpkg.com/split-type"
-  ></script>
-
-
-  <!-- OUR JS -->
   <script src="script.js"></script>
+
+
+  <!-- JavaScript xətası olsa belə loader bağlansın -->
+
+  <script>
+    setTimeout(function () {
+      const loader = document.getElementById("preloader");
+
+      if (loader && getComputedStyle(loader).display !== "none") {
+        loader.style.opacity = "0";
+        loader.style.visibility = "hidden";
+        loader.style.pointerEvents = "none";
+      }
+    }, 3000);
+  </script>
 
 </body>
 </html>
