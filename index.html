@@ -2,1166 +2,1879 @@
 <html lang="az">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Almora | Qubadan süfrənizə</title>
 
   <meta
-    name="description"
-    content="Almora — Quba, Aşağı Atucda yerləşən alma bağı. Bağdan yığıma, çeşidləmədən soyuducu saxlama və qablaşdırmaya qədər Almora hekayəsi."
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
   >
 
+  <title>ALMORA — Bağımızdan sizə</title>
+
+  <meta
+    id="metaDescription"
+    name="description"
+    content="ALMORA — Qubadan seçilmiş premium alma dadı. Təbiətin ən təmiz dadı, sevgi ilə yetişdirilir və qayğı ilə sizə çatdırılır."
+  >
+
+  <meta name="theme-color" content="#140A0C">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ALMORA — Bağımızdan sizə">
+
+  <meta
+    id="ogDescription"
+    property="og:description"
+    content="Qubadan seçilmiş premium alma dadı."
+  >
+
+  <meta property="og:image" content="assets/images/hero.jpg">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap&subset=cyrillic"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="style.css">
+
+
+  <!-- Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ALMORA",
+    "description": "Premium apple brand from Quba, Azerbaijan.",
+    "telephone": "+994557525353",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aşağı Atuc",
+      "addressRegion": "Quba",
+      "addressCountry": "AZ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.4593543,
+      "longitude": 48.5551978
+    },
+    "sameAs": [
+      "https://www.instagram.com/almora.az/"
+    ]
+  }
+  </script>
 </head>
+
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container nav">
 
-      <a href="#home" class="logo">
-        <span class="logo-symbol">
-          <span class="logo-heart">♥</span>
+  <!-- ==========================================
+       PRELOADER
+  =========================================== -->
+
+  <div class="preloader" id="preloader">
+
+    <div class="preloader-inner">
+
+      <div class="loader-logo">
+
+        <svg
+          viewBox="0 0 100 110"
+          aria-hidden="true"
+        >
+          <path
+            class="loader-apple-outline"
+            d="M50 96C38 82 14 66 14 42C14 23 31 16 43 28C47 32 49 36 50 38C51 36 53 32 57 28C69 16 86 23 86 42C86 66 62 82 50 96Z"
+          />
+
+          <path
+            class="loader-leaf"
+            d="M52 18C57 5 70 3 77 7C72 17 63 23 52 18Z"
+          />
+        </svg>
+
+      </div>
+
+
+      <div class="preloader-word">
+        ALMORA
+      </div>
+
+
+      <div class="preloader-line">
+        <span id="preloaderProgress"></span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ==========================================
+       CINEMATIC OVERLAYS
+  =========================================== -->
+
+  <div class="film-grain"></div>
+  <div class="global-vignette"></div>
+
+
+
+  <!-- ==========================================
+       CUSTOM CURSOR
+  =========================================== -->
+
+  <div class="cursor-dot"></div>
+
+  <div class="cursor-ring">
+    <span data-i18n="cursorView">
+      Bax
+    </span>
+  </div>
+
+
+
+  <!-- ==========================================
+       HEADER
+  =========================================== -->
+
+  <header class="site-header" id="siteHeader">
+
+    <div class="header-inner">
+
+
+      <!-- LOGO -->
+
+      <a
+        href="#home"
+        class="brand-logo"
+        aria-label="ALMORA"
+      >
+
+        <svg
+          class="brand-symbol"
+          viewBox="0 0 100 110"
+          aria-hidden="true"
+        >
+          <path
+            d="M50 96C38 82 14 66 14 42C14 23 31 16 43 28C47 32 49 36 50 38C51 36 53 32 57 28C69 16 86 23 86 42C86 66 62 82 50 96Z"
+          />
+
+          <path
+            class="brand-leaf"
+            d="M52 18C57 5 70 3 77 7C72 17 63 23 52 18Z"
+          />
+        </svg>
+
+
+        <span>
+          ALMORA
         </span>
-        <span>ALMORA</span>
+
       </a>
 
-      <nav class="menu">
-        <a href="#home"
-           data-az="Ana səhifə"
-           data-en="Home"
-           data-ru="Главная">
-          Ana səhifə
-        </a>
 
-        <a href="#story"
-           data-az="Hekayəmiz"
-           data-en="Our Story"
-           data-ru="Наша история">
+
+      <!-- NAVIGATION -->
+
+      <nav class="desktop-navigation">
+
+        <a
+          href="#story"
+          data-i18n="navStory"
+        >
           Hekayəmiz
         </a>
 
-        <a href="#apples"
-           data-az="Almalarımız"
-           data-en="Our Apples"
-           data-ru="Наши яблоки">
-          Almalarımız
+
+        <a
+          href="#orchard"
+          data-i18n="navOrchard"
+        >
+          Bağımız
         </a>
 
-        <a href="#process"
-           data-az="Proses"
-           data-en="Process"
-           data-ru="Процесс">
-          Proses
+
+        <a
+          href="#varieties"
+          data-i18n="navVarieties"
+        >
+          Sortlarımız
         </a>
 
-        <a href="#storage"
-           data-az="Anbar"
-           data-en="Storage"
-           data-ru="Хранилище">
-          Anbar
-        </a>
 
-        <a href="#contact"
-           data-az="Əlaqə"
-           data-en="Contact"
-           data-ru="Контакты">
+        <a
+          href="#contact"
+          data-i18n="navContact"
+        >
           Əlaqə
         </a>
+
       </nav>
 
-      <div class="languages">
-        <button class="lang-btn active" data-lang="az">AZ</button>
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ru">RU</button>
+
+
+      <!-- RIGHT -->
+
+      <div class="header-actions">
+
+
+        <!-- LANGUAGE -->
+
+        <div
+          class="language-switcher desktop-language"
+          aria-label="Language"
+        >
+
+          <button
+            type="button"
+            class="language-button active"
+            data-language="az"
+          >
+            AZ
+          </button>
+
+          <span>/</span>
+
+          <button
+            type="button"
+            class="language-button"
+            data-language="ru"
+          >
+            RU
+          </button>
+
+          <span>/</span>
+
+          <button
+            type="button"
+            class="language-button"
+            data-language="en"
+          >
+            EN
+          </button>
+
+        </div>
+
+
+
+        <!-- CONTACT CTA -->
+
+        <a
+          href="#contact"
+          class="header-cta magnetic"
+          data-i18n="headerContact"
+        >
+          Bizimlə əlaqə
+        </a>
+
+
+
+        <!-- BURGER -->
+
+        <button
+          type="button"
+          class="burger-button"
+          id="burgerButton"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
       </div>
 
     </div>
+
   </header>
 
 
-  <!-- HERO -->
-  <section class="hero" id="home">
 
-    <div class="hero-overlay"></div>
-    <div class="hero-glow"></div>
+  <!-- ==========================================
+       MOBILE MENU
+  =========================================== -->
 
-    <div class="container hero-inner">
+  <aside
+    class="mobile-menu"
+    id="mobileMenu"
+  >
 
-      <div class="hero-copy reveal">
-
-        <span
-          class="eyebrow"
-          data-az="AŞAĞI ATUC • QUBA • AZƏRBAYCAN"
-          data-en="ASHAGI ATUJ • QUBA • AZERBAIJAN"
-          data-ru="АШАГЫ АТУДЖ • ГУБА • АЗЕРБАЙДЖАН">
-          AŞAĞI ATUC • QUBA • AZƏRBAYCAN
-        </span>
-
-        <h1>
-          <span
-            data-az="Bir alma"
-            data-en="An apple"
-            data-ru="Одно яблоко">
-            Bir alma
-          </span>
-
-          <span
-            class="accent"
-            data-az="bir gündə"
-            data-en="does not grow"
-            data-ru="не вырастает">
-            bir gündə
-          </span>
-
-          <span
-            data-az="yetişmir."
-            data-en="in one day."
-            data-ru="за один день.">
-            yetişmir.
-          </span>
-        </h1>
-
-        <p
-          data-az="Torpaq, zaman, zəhmət və qayğı. Almora-da hər alma öz hekayəsi ilə yetişir."
-          data-en="Soil, time, hard work and care. At Almora, every apple grows with its own story."
-          data-ru="Земля, время, труд и забота. В Almora каждое яблоко растёт со своей историей.">
-          Torpaq, zaman, zəhmət və qayğı. Almora-da hər alma öz hekayəsi ilə yetişir.
-        </p>
-
-        <div class="hero-buttons">
-
-          <a href="#story"
-             class="btn btn-red"
-             data-az="Bağı kəşf et"
-             data-en="Explore the orchard"
-             data-ru="Открыть сад">
-            Bağı kəşf et
-          </a>
-
-          <a href="#harvest"
-             class="btn btn-glass"
-             data-az="Videoya bax"
-             data-en="Watch video"
-             data-ru="Смотреть видео">
-            Videoya bax
-          </a>
-
-        </div>
-
-      </div>
-
+    <div class="mobile-menu-background">
+      ALMORA
     </div>
 
-    <div class="hero-coordinates">
-      <span>41.459354° N</span>
-      <span>48.555198° E</span>
-    </div>
 
-    <a href="#story" class="scroll-down">
-      <span></span>
-      SCROLL
-    </a>
+    <div class="mobile-menu-content">
 
-  </section>
-
-
-  <!-- QUOTE -->
-  <section class="big-phrase">
-    <div class="container">
-      <p
-        class="reveal"
-        data-az="Hər şey torpaqdan başlayır."
-        data-en="Everything begins with the soil."
-        data-ru="Всё начинается с земли.">
-        Hər şey torpaqdan başlayır.
-      </p>
-    </div>
-  </section>
-
-
-  <!-- STORY -->
-  <section class="story section" id="story">
-
-    <div class="container story-grid">
-
-      <div class="story-image reveal">
-
-        <img
-          src="assets/images/orchard-story.jpg"
-          alt="Almora orchard story">
-
-        <div class="story-image-tag">
-          <small>ALMORA</small>
-          <strong>Quba</strong>
-          <span>Aşağı Atuc</span>
-        </div>
-
-      </div>
-
-      <div class="story-copy reveal">
-
-        <span
-          class="section-label"
-          data-az="BİZİM HEKAYƏMİZ"
-          data-en="OUR STORY"
-          data-ru="НАША ИСТОРИЯ">
-          BİZİM HEKAYƏMİZ
-        </span>
-
-        <h2
-          data-az="Qubada başlayan bağ hekayəsi"
-          data-en="An orchard story that began in Quba"
-          data-ru="История сада, начавшаяся в Губе">
-          Qubada başlayan bağ hekayəsi
-        </h2>
-
-        <p
-          data-az="Almora bağı Qubanın Aşağı Atuc ərazisində yerləşir. Bağın sahibləri Manaf Arabov və Saleh Arabovdur. Burada hər məhsul təbiətə hörmət, zəhmət və keyfiyyət prinsipi ilə yetişdirilir."
-          data-en="The Almora orchard is located in Ashagi Atuj, Quba. The orchard is owned by Manaf Arabov and Saleh Arabov. Every product here is grown with respect for nature, hard work and a commitment to quality."
-          data-ru="Сад Almora расположен в Ашагы Атудж, Губа. Владельцы сада — Манаф Арабов и Салех Арабов. Здесь каждый плод выращивается с уважением к природе, трудом и вниманием к качеству.">
-          Almora bağı Qubanın Aşağı Atuc ərazisində yerləşir. Bağın sahibləri Manaf Arabov və Saleh Arabovdur.
-        </p>
-
-        <p
-          data-az="Bizim üçün yığım son nöqtə deyil. Məhsul ağacdan ayrıldıqdan sonra seçim, çeşidləmə, saxlama və qablaşdırma mərhələlərində də keyfiyyət qorunmalıdır."
-          data-en="For us, harvest is not the final step. After the fruit leaves the tree, quality must also be preserved through selection, sorting, storage and packaging."
-          data-ru="Для нас сбор урожая — не последний этап. После снятия плода с дерева качество должно сохраняться при отборе, сортировке, хранении и упаковке.">
-          Bizim üçün yığım son nöqtə deyil. Keyfiyyət növbəti mərhələlərdə də qorunmalıdır.
-        </p>
-
-        <div class="story-facts">
-
-          <div>
-            <small
-              data-az="Məkan"
-              data-en="Location"
-              data-ru="Место">
-              Məkan
-            </small>
-            <strong>Quba</strong>
-          </div>
-
-          <div>
-            <small
-              data-az="Bağın sahibləri"
-              data-en="Orchard owners"
-              data-ru="Владельцы сада">
-              Bağın sahibləri
-            </small>
-            <strong>Manaf & Saleh Arabov</strong>
-          </div>
-
-          <div>
-            <small
-              data-az="İstiqamət"
-              data-en="Focus"
-              data-ru="Направление">
-              İstiqamət
-            </small>
-            <strong
-              data-az="Almaçılıq"
-              data-en="Apple growing"
-              data-ru="Яблоководство">
-              Almaçılıq
-            </strong>
-          </div>
-
-        </div>
+      <nav>
 
         <a
-          href="https://www.google.com/maps?q=41.4593543,48.5551978"
+          href="#home"
+          data-i18n="navHome"
+        >
+          Ana səhifə
+        </a>
+
+        <a
+          href="#story"
+          data-i18n="navStory"
+        >
+          Hekayəmiz
+        </a>
+
+        <a
+          href="#orchard"
+          data-i18n="navOrchard"
+        >
+          Bağımız
+        </a>
+
+        <a
+          href="#varieties"
+          data-i18n="navVarieties"
+        >
+          Sortlarımız
+        </a>
+
+        <a
+          href="#contact"
+          data-i18n="navContact"
+        >
+          Əlaqə
+        </a>
+
+      </nav>
+
+
+
+      <div class="mobile-menu-bottom">
+
+        <div class="language-switcher">
+
+          <button
+            type="button"
+            class="language-button active"
+            data-language="az"
+          >
+            AZ
+          </button>
+
+          <span>/</span>
+
+          <button
+            type="button"
+            class="language-button"
+            data-language="ru"
+          >
+            RU
+          </button>
+
+          <span>/</span>
+
+          <button
+            type="button"
+            class="language-button"
+            data-language="en"
+          >
+            EN
+          </button>
+
+        </div>
+
+
+        <a
+          href="https://www.instagram.com/almora.az/"
           target="_blank"
-          class="text-link"
-          data-az="Bağı xəritədə aç →"
-          data-en="Open orchard on map →"
-          data-ru="Открыть сад на карте →">
-          Bağı xəritədə aç →
+          rel="noopener noreferrer"
+        >
+          Instagram ↗
         </a>
 
       </div>
 
     </div>
 
-  </section>
+  </aside>
 
 
-  <!-- APPLES -->
-  <section class="apples section" id="apples">
 
-    <div class="container">
+  <main>
 
-      <div class="section-heading reveal">
 
-        <span
-          class="section-label"
-          data-az="ALMALARIMIZ"
-          data-en="OUR APPLES"
-          data-ru="НАШИ ЯБЛОКИ">
-          ALMALARIMIZ
-        </span>
+    <!-- ==========================================
+         01 — HERO
+    =========================================== -->
 
-        <h2
-          data-az="Hər sortun öz xarakteri var."
-          data-en="Every variety has its own character."
-          data-ru="У каждого сорта свой характер.">
-          Hər sortun öz xarakteri var.
-        </h2>
+    <section
+      class="hero"
+      id="home"
+    >
 
-        <p
-          data-az="Dad, rəng, tekstura və yığım dövrü sortdan sorta dəyişir."
-          data-en="Taste, colour, texture and harvest period vary from variety to variety."
-          data-ru="Вкус, цвет, текстура и период сбора различаются в зависимости от сорта.">
-          Dad, rəng, tekstura və yığım dövrü sortdan sorta dəyişir.
-        </p>
+
+      <!-- VIDEO -->
+
+      <div class="hero-media">
+
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/images/hero.jpg"
+        >
+          <source
+            src="assets/videos/brand-story.mp4"
+            type="video/mp4"
+          >
+        </video>
+
+
+        <div class="hero-image-fallback"></div>
 
       </div>
 
 
-      <div class="apple-grid">
+      <!-- OVERLAY -->
 
-        <!-- FUJI -->
-        <article class="apple-card reveal">
+      <div class="hero-gradient"></div>
 
-          <div class="apple-image">
-            <img
-              src="assets/images/fuji.jpg"
-              alt="Fuji Apple by Almora">
+
+
+      <!-- THREE.JS -->
+
+      <div class="three-stage">
+        <canvas id="appleCanvas"></canvas>
+      </div>
+
+
+
+      <!-- LEAVES -->
+
+      <div
+        class="hero-particles"
+        id="heroParticles"
+        aria-hidden="true"
+      ></div>
+
+
+
+      <!-- CONTENT -->
+
+      <div class="hero-inner">
+
+        <div class="hero-copy">
+
+
+          <div
+            class="hero-eyebrow split-reveal"
+            data-i18n="heroEyebrow"
+          >
+            QUBA • AZƏRBAYCAN
           </div>
 
-          <div class="apple-content">
 
-            <div class="apple-topline">
-              <span>01</span>
-              <small>ALMORA SELECT</small>
+          <h1 class="hero-title">
+
+            <span
+              class="hero-title-main split-reveal"
+              data-i18n="heroTitleMain"
+            >
+              Bağımızdan
+            </span>
+
+            <span
+              class="hero-title-script"
+              data-i18n="heroTitleScript"
+            >
+              sizə
+            </span>
+
+          </h1>
+
+
+          <p
+            class="hero-subtitle"
+            data-i18n="heroSubtitle"
+          >
+            Təbiətin ən təmiz dadı. Sevgi ilə yetişdirilir,
+            qayğı ilə sizə çatdırılır.
+          </p>
+
+
+
+          <div class="hero-buttons">
+
+            <a
+              href="#varieties"
+              class="button button-red magnetic"
+            >
+              <span data-i18n="heroProducts">
+                Məhsullarımızı kəşf et
+              </span>
+
+              <i>↗</i>
+            </a>
+
+
+            <a
+              href="#story"
+              class="button button-glass magnetic"
+            >
+              <span data-i18n="heroStory">
+                Hekayəmiz
+              </span>
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- SCROLL -->
+
+        <a
+          href="#marquee"
+          class="hero-scroll"
+        >
+
+          <span data-i18n="scroll">
+            Aşağı
+          </span>
+
+          <div class="hero-scroll-line">
+            <i></i>
+          </div>
+
+        </a>
+
+
+        <!-- COORDINATES -->
+
+        <div class="hero-coordinates">
+
+          <span>
+            41.459354° N
+          </span>
+
+          <span>
+            48.555198° E
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         02 — MARQUEE
+    =========================================== -->
+
+    <section
+      class="marquee-section"
+      id="marquee"
+    >
+
+      <div class="marquee-track">
+
+
+        <div
+          class="marquee-content"
+          data-i18n="marquee"
+        >
+          TƏZƏ • TƏBİİ • SEVGİ İLƏ • NƏSİLDƏN NƏSLƏ •
+          PREMIUM KEYFİYYƏT •
+        </div>
+
+
+        <div
+          class="marquee-content"
+          data-i18n="marquee"
+          aria-hidden="true"
+        >
+          TƏZƏ • TƏBİİ • SEVGİ İLƏ • NƏSİLDƏN NƏSLƏ •
+          PREMIUM KEYFİYYƏT •
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         03 — STORY
+    =========================================== -->
+
+    <section
+      class="story-section section"
+      id="story"
+    >
+
+      <div class="page-shell story-layout">
+
+
+        <!-- IMAGE -->
+
+        <div
+          class="story-visual image-hover"
+          data-cursor="view"
+        >
+
+          <div class="gold-frame"></div>
+
+          <div class="image-reveal">
+
+            <img
+              src="assets/images/heritage-poster.jpg"
+              alt="ALMORA orchard story"
+              loading="lazy"
+            >
+
+          </div>
+
+        </div>
+
+
+
+        <!-- TEXT -->
+
+        <div class="story-copy">
+
+          <div
+            class="section-number"
+            data-i18n="storyNumber"
+          >
+            01 — HEKAYƏMİZ
+          </div>
+
+
+          <h2
+            class="section-title split-reveal"
+            data-i18n="storyTitle"
+          >
+            Sevgi qayğı ilə ötürülür,
+            nəsildən nəslə…
+          </h2>
+
+
+          <p
+            class="story-lead"
+            data-i18n="storyLead"
+          >
+            Bəzi şeylər öyrədilmir. Onlar yaşanır.
+          </p>
+
+
+          <p
+            class="story-text"
+            data-i18n="storyText"
+          >
+            Torpağa hörmət, məhsula qayğı və hər mövsüm yenidən
+            başlayan səbir. ALMORA üçün alma sadəcə meyvə deyil —
+            bağla insan arasında illərlə qurulan bir bağdır.
+          </p>
+
+
+          <a
+            href="#orchard"
+            class="text-link magnetic"
+          >
+
+            <span data-i18n="storyButton">
+              Bağımızı kəşf et
+            </span>
+
+            <i>↗</i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         04 — ORCHARD / HORIZONTAL
+    =========================================== -->
+
+    <section
+      class="orchard-section"
+      id="orchard"
+    >
+
+      <div class="orchard-sticky">
+
+
+        <!-- INTRO -->
+
+        <div class="orchard-heading page-shell">
+
+          <div
+            class="section-number light"
+            data-i18n="orchardNumber"
+          >
+            02 — BAĞIMIZ
+          </div>
+
+
+          <h2
+            class="section-title light split-reveal"
+            data-i18n="orchardTitle"
+          >
+            Hər şey torpaqdan başlayır.
+          </h2>
+
+        </div>
+
+
+
+        <!-- HORIZONTAL TRACK -->
+
+        <div
+          class="orchard-track"
+          id="orchardTrack"
+        >
+
+
+          <!-- CARD 1 -->
+
+          <article class="orchard-panel">
+
+            <div class="orchard-panel-image image-hover">
+
+              <img
+                src="assets/images/harvest-back.jpg"
+                alt="ALMORA orchard"
+                loading="lazy"
+              >
+
             </div>
 
-            <h3>Fuji</h3>
 
-            <p
-              data-az="Şirinliyi, xırtıldayan teksturası və şirəli quruluşu ilə seçilən qırmızı alma sortudur."
-              data-en="A red apple variety known for sweetness, crisp texture and juicy bite."
-              data-ru="Красный сорт яблок, известный сладостью, хрустящей текстурой и сочностью.">
-              Şirin, xırtıldayan və şirəli alma sortudur.
+            <div class="orchard-panel-copy">
+
+              <span class="outline-number">
+                01
+              </span>
+
+              <h3 data-i18n="orchardCard1Title">
+                Torpaq
+              </h3>
+
+              <p data-i18n="orchardCard1Text">
+                Qubanın torpağı hər mövsümün ilk imzasıdır.
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 2 -->
+
+          <article class="orchard-panel">
+
+            <div class="orchard-panel-image image-hover">
+
+              <img
+                src="assets/images/harvest-workers.jpg"
+                alt="ALMORA harvest"
+                loading="lazy"
+              >
+
+            </div>
+
+
+            <div class="orchard-panel-copy">
+
+              <span class="outline-number">
+                02
+              </span>
+
+              <h3 data-i18n="orchardCard2Title">
+                Əllər
+              </h3>
+
+              <p data-i18n="orchardCard2Text">
+                Hər alma diqqətlə, yetişdiyi anda seçilir.
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- CARD 3 -->
+
+          <article class="orchard-panel">
+
+            <div class="orchard-panel-image image-hover">
+
+              <img
+                src="assets/images/woman-crate.jpg"
+                alt="ALMORA apple harvest"
+                loading="lazy"
+              >
+
+            </div>
+
+
+            <div class="orchard-panel-copy">
+
+              <span class="outline-number">
+                03
+              </span>
+
+              <h3 data-i18n="orchardCard3Title">
+                Qayğı
+              </h3>
+
+              <p data-i18n="orchardCard3Text">
+                Yığım son deyil. Keyfiyyətin davamıdır.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         05 — PEOPLE
+    =========================================== -->
+
+    <section
+      class="people-section section"
+      id="people"
+    >
+
+      <div class="page-shell">
+
+
+        <div class="people-heading">
+
+          <div>
+
+            <div
+              class="section-number"
+              data-i18n="peopleNumber"
+            >
+              03 — ƏLLƏRİN ZƏHMƏTİ
+            </div>
+
+
+            <h2
+              class="section-title split-reveal"
+              data-i18n="peopleTitle"
+            >
+              Bir mövsümün arxasında insanlar var.
+            </h2>
+
+          </div>
+
+
+          <p data-i18n="peopleIntro">
+            Hər meyvəyə toxunan əllər, hər ağaca ayrılan vaxt,
+            hər gün təkrarlanan qayğı.
+          </p>
+
+        </div>
+
+
+
+        <!-- HERO PEOPLE IMAGE -->
+
+        <div class="people-image image-hover">
+
+          <img
+            src="assets/images/team-tractor.jpg"
+            alt="ALMORA harvest team"
+            loading="lazy"
+          >
+
+          <div class="people-image-overlay"></div>
+
+
+          <div class="people-image-caption">
+
+            <span data-i18n="peopleCaption">
+              ALMORA komandası • Quba
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- COUNTERS -->
+
+        <div class="counter-grid">
+
+
+          <div class="counter-item">
+
+            <strong
+              class="counter-number"
+              data-count="100"
+            >
+              0
+            </strong>
+
+            <span>%</span>
+
+            <p data-i18n="counter1">
+              diqqətli seçim
             </p>
 
-            <div class="apple-details">
+          </div>
 
-              <div>
-                <small
-                  data-az="Dad"
-                  data-en="Taste"
-                  data-ru="Вкус">
-                  Dad
+
+
+          <div class="counter-item">
+
+            <strong
+              class="counter-number"
+              data-count="3"
+            >
+              0
+            </strong>
+
+            <span>+</span>
+
+            <p data-i18n="counter2">
+              nəsil qayğı
+            </p>
+
+          </div>
+
+
+
+          <div class="counter-item">
+
+            <strong
+              class="counter-number"
+              data-count="365"
+            >
+              0
+            </strong>
+
+            <span></span>
+
+            <p data-i18n="counter3">
+              gün diqqət
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         06 — VARIETIES
+    =========================================== -->
+
+    <section
+      class="varieties-section section"
+      id="varieties"
+    >
+
+      <div class="page-shell">
+
+
+        <div class="varieties-heading">
+
+          <div
+            class="section-number"
+            data-i18n="varietiesNumber"
+          >
+            04 — SORTLARIMIZ
+          </div>
+
+
+          <h2
+            class="section-title split-reveal"
+            data-i18n="varietiesTitle"
+          >
+            Hər rəngin öz xarakteri var.
+          </h2>
+
+        </div>
+
+
+
+        <div class="varieties-grid">
+
+
+          <!-- FUJI -->
+
+          <article
+            class="variety-card tilt-card"
+          >
+
+            <div class="variety-image">
+
+              <img
+                src="assets/images/fuji.jpg"
+                alt="Fuji apple"
+                loading="lazy"
+              >
+
+            </div>
+
+
+            <div class="variety-content">
+
+              <div class="variety-top">
+
+                <span>
+                  01
+                </span>
+
+                <small>
+                  ALMORA SELECT
                 </small>
-                <strong
-                  data-az="Şirin"
-                  data-en="Sweet"
-                  data-ru="Сладкий">
-                  Şirin
-                </strong>
+
               </div>
 
-              <div>
-                <small
-                  data-az="Tekstura"
-                  data-en="Texture"
-                  data-ru="Текстура">
-                  Tekstura
-                </small>
-                <strong
-                  data-az="Xırtıldayan"
-                  data-en="Crisp"
-                  data-ru="Хрустящая">
+
+              <h3>
+                Fuji
+              </h3>
+
+
+              <div class="taste-tags">
+
+                <span data-i18n="tasteSweet">
+                  Şirin
+                </span>
+
+                <span data-i18n="tasteJuicy">
+                  Şirəli
+                </span>
+
+                <span data-i18n="tasteCrisp">
                   Xırtıldayan
-                </strong>
-              </div>
+                </span>
 
-              <div>
-                <small
-                  data-az="Yığım"
-                  data-en="Harvest"
-                  data-ru="Сбор">
-                  Yığım
-                </small>
-                <strong
-                  data-az="Payız"
-                  data-en="Autumn"
-                  data-ru="Осень">
-                  Payız
-                </strong>
               </div>
 
             </div>
 
-          </div>
-
-        </article>
+          </article>
 
 
-        <!-- GRANNY SMITH -->
-        <article class="apple-card reveal">
 
-          <div class="apple-image">
-            <img
-              src="assets/images/granny-smith.jpg"
-              alt="Granny Smith Apple by Almora">
-          </div>
+          <!-- GRANNY -->
 
-          <div class="apple-content">
+          <article
+            class="variety-card tilt-card"
+          >
 
-            <div class="apple-topline">
-              <span>02</span>
-              <small>ALMORA FRESH</small>
+            <div class="variety-image">
+
+              <img
+                src="assets/images/granny-smith.jpg"
+                alt="Granny Smith apple"
+                loading="lazy"
+              >
+
             </div>
 
-            <h3>Granny Smith</h3>
 
-            <p
-              data-az="Yaşıl rəngi, təravətli turşməz dadı və sərt teksturası ilə seçilir."
-              data-en="Known for its green colour, refreshing tart taste and firm crisp texture."
-              data-ru="Известен зелёным цветом, освежающей кислинкой и плотной хрустящей текстурой.">
-              Yaşıl rəngi, təravətli turşməz dadı və sərt teksturası ilə seçilir.
-            </p>
+            <div class="variety-content">
 
-            <div class="apple-details">
+              <div class="variety-top">
 
-              <div>
-                <small
-                  data-az="Dad"
-                  data-en="Taste"
-                  data-ru="Вкус">
-                  Dad
+                <span>
+                  02
+                </span>
+
+                <small>
+                  ALMORA FRESH
                 </small>
-                <strong
-                  data-az="Turşməz"
-                  data-en="Tart"
-                  data-ru="Кисловатый">
-                  Turşməz
-                </strong>
+
               </div>
 
-              <div>
-                <small
-                  data-az="Rəng"
-                  data-en="Colour"
-                  data-ru="Цвет">
-                  Rəng
-                </small>
-                <strong
-                  data-az="Yaşıl"
-                  data-en="Green"
-                  data-ru="Зелёный">
-                  Yaşıl
-                </strong>
-              </div>
 
-              <div>
-                <small
-                  data-az="Yığım"
-                  data-en="Harvest"
-                  data-ru="Сбор">
-                  Yığım
-                </small>
-                <strong
-                  data-az="Payız"
-                  data-en="Autumn"
-                  data-ru="Осень">
-                  Payız
-                </strong>
+              <h3>
+                Granny Smith
+              </h3>
+
+
+              <div class="taste-tags">
+
+                <span data-i18n="tasteFresh">
+                  Təravətli
+                </span>
+
+                <span data-i18n="tasteTart">
+                  Turşməzə
+                </span>
+
+                <span data-i18n="tasteCrisp">
+                  Xırtıldayan
+                </span>
+
               </div>
 
             </div>
 
-          </div>
-
-        </article>
+          </article>
 
 
-        <!-- GOLDEN -->
-        <article class="apple-card reveal">
 
-          <div class="apple-image">
-            <img
-              src="assets/images/golden-delicious.jpg"
-              alt="Golden Delicious Apple by Almora">
-          </div>
+          <!-- GOLDEN -->
 
-          <div class="apple-content">
+          <article
+            class="variety-card tilt-card"
+          >
 
-            <div class="apple-topline">
-              <span>03</span>
-              <small>ALMORA GOLD</small>
+            <div class="variety-image">
+
+              <img
+                src="assets/images/golden-delicious.jpg"
+                alt="Golden Delicious apple"
+                loading="lazy"
+              >
+
             </div>
 
-            <h3>Golden Delicious</h3>
 
-            <p
-              data-az="Qızılı rəngi, yumşaq aroması və balanslı şirinliyi ilə tanınan klassik alma sortudur."
-              data-en="A classic apple variety known for its golden colour, soft aroma and balanced sweetness."
-              data-ru="Классический сорт яблок, известный золотистым цветом, мягким ароматом и сбалансированной сладостью.">
-              Qızılı rəngi, yumşaq aroması və balanslı şirinliyi ilə tanınır.
-            </p>
+            <div class="variety-content">
 
-            <div class="apple-details">
+              <div class="variety-top">
 
-              <div>
-                <small
-                  data-az="Dad"
-                  data-en="Taste"
-                  data-ru="Вкус">
-                  Dad
+                <span>
+                  03
+                </span>
+
+                <small>
+                  ALMORA GOLD
                 </small>
-                <strong
-                  data-az="Şirin"
-                  data-en="Sweet"
-                  data-ru="Сладкий">
+
+              </div>
+
+
+              <h3>
+                Golden Delicious
+              </h3>
+
+
+              <div class="taste-tags">
+
+                <span data-i18n="tasteDelicate">
+                  Zərif
+                </span>
+
+                <span data-i18n="tasteAromatic">
+                  Aromatik
+                </span>
+
+                <span data-i18n="tasteSweet">
                   Şirin
-                </strong>
-              </div>
+                </span>
 
-              <div>
-                <small
-                  data-az="Rəng"
-                  data-en="Colour"
-                  data-ru="Цвет">
-                  Rəng
-                </small>
-                <strong
-                  data-az="Qızılı"
-                  data-en="Golden"
-                  data-ru="Золотистый">
-                  Qızılı
-                </strong>
-              </div>
-
-              <div>
-                <small
-                  data-az="Yığım"
-                  data-en="Harvest"
-                  data-ru="Сбор">
-                  Yığım
-                </small>
-                <strong
-                  data-az="Payız"
-                  data-en="Autumn"
-                  data-ru="Осень">
-                  Payız
-                </strong>
               </div>
 
             </div>
 
-          </div>
+          </article>
 
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CALENDAR -->
-  <section class="season">
-
-    <div class="container season-grid">
-
-      <div class="season-title reveal">
-
-        <span
-          data-az="BAĞIN TƏQVİMİ"
-          data-en="ORCHARD CALENDAR"
-          data-ru="КАЛЕНДАРЬ САДА">
-          BAĞIN TƏQVİMİ
-        </span>
-
-        <h2
-          data-az="Bir mövsüm. Bir illik zəhmət."
-          data-en="One season. A year of work."
-          data-ru="Один сезон. Год труда.">
-          Bir mövsüm. Bir illik zəhmət.
-        </h2>
-
-      </div>
-
-      <div class="season-list">
-
-        <div class="season-row reveal">
-          <span>01</span>
-          <strong
-            data-az="Yaz"
-            data-en="Spring"
-            data-ru="Весна">
-            Yaz
-          </strong>
-          <p
-            data-az="Çiçəklənmə və yeni məhsulun başlanğıcı."
-            data-en="Blossoming and the beginning of a new crop."
-            data-ru="Цветение и начало нового урожая.">
-            Çiçəklənmə və yeni məhsulun başlanğıcı.
-          </p>
-        </div>
-
-        <div class="season-row reveal">
-          <span>02</span>
-          <strong
-            data-az="Yay"
-            data-en="Summer"
-            data-ru="Лето">
-            Yay
-          </strong>
-          <p
-            data-az="Böyümə, qulluq və meyvənin formalaşması."
-            data-en="Growth, care and fruit development."
-            data-ru="Рост, уход и формирование плодов.">
-            Böyümə, qulluq və meyvənin formalaşması.
-          </p>
-        </div>
-
-        <div class="season-row reveal">
-          <span>03</span>
-          <strong
-            data-az="Payız"
-            data-en="Autumn"
-            data-ru="Осень">
-            Payız
-          </strong>
-          <p
-            data-az="Sortdan asılı olaraq əsas yığım dövrü."
-            data-en="The main harvesting period depending on variety."
-            data-ru="Основной период сбора в зависимости от сорта.">
-            Sortdan asılı olaraq əsas yığım dövrü.
-          </p>
-        </div>
-
-        <div class="season-row reveal">
-          <span>04</span>
-          <strong
-            data-az="Saxlama"
-            data-en="Storage"
-            data-ru="Хранение">
-            Saxlama
-          </strong>
-          <p
-            data-az="Seçilmiş məhsulun uyğun şəraitdə qorunması."
-            data-en="Preserving selected fruit under suitable conditions."
-            data-ru="Хранение отобранных плодов в подходящих условиях.">
-            Seçilmiş məhsulun uyğun şəraitdə qorunması.
-          </p>
         </div>
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- HARVEST VIDEO -->
-  <section class="section-dark" id="harvest">
 
-    <div class="container media-grid">
+    <!-- ==========================================
+         07 — PREMIUM / GIFT
+    =========================================== -->
 
-      <div class="media-copy reveal">
+    <section
+      class="premium-section"
+      id="premium"
+    >
 
-        <span
-          class="section-label light"
-          data-az="REAL ALMORA"
-          data-en="REAL ALMORA"
-          data-ru="REAL ALMORA">
-          REAL ALMORA
-        </span>
+      <div class="premium-background">
 
-        <h2
-          data-az="Yığım mövsümü"
-          data-en="Harvest season"
-          data-ru="Сезон сбора">
-          Yığım mövsümü
-        </h2>
+        <img
+          src="assets/images/premium-apples.jpg"
+          alt="Premium ALMORA apples"
+          loading="lazy"
+        >
+
+      </div>
+
+
+      <div class="premium-overlay"></div>
+
+
+      <div class="premium-ribbon"></div>
+
+
+      <div class="page-shell premium-content">
+
+        <div
+          class="section-number gold"
+          data-i18n="premiumNumber"
+        >
+          05 — ALMORA SELECT
+        </div>
+
 
         <p
-          data-az="Ən yaxşı alma ağacdan düzgün vaxtda ayrılır. Məhsul diqqətlə yığılır və növbəti mərhələyə hazırlanır."
-          data-en="The best apple is picked at the right time. Fruit is carefully harvested and prepared for the next stage."
-          data-ru="Лучшее яблоко снимают с дерева в нужный момент. Урожай аккуратно собирают и готовят к следующему этапу.">
-          Ən yaxşı alma ağacdan düzgün vaxtda ayrılır.
+          class="premium-script"
+          data-i18n="premiumSmall"
+        >
+          xüsusi anlar üçün
         </p>
+
+
+        <h2
+          class="premium-title split-reveal"
+          data-i18n="premiumTitle"
+        >
+          Hər alma —
+          bir hədiyyə.
+        </h2>
+
+
+        <p
+          class="premium-description"
+          data-i18n="premiumText"
+        >
+          Təbiətin sadəliyini premium təqdimatda hiss edin.
+        </p>
+
+
+        <a
+          href="#contact"
+          class="button button-gold magnetic"
+        >
+
+          <span data-i18n="premiumButton">
+            Bizimlə əlaqə
+          </span>
+
+          <i>↗</i>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         08 — QUOTE
+    =========================================== -->
+
+    <section class="quote-section">
+
+      <div class="page-shell">
 
         <blockquote
-          data-az="“Bağın arxasında insanlar var.”"
-          data-en="“Behind every orchard are people.”"
-          data-ru="«За каждым садом стоят люди.»">
-          “Bağın arxasında insanlar var.”
+          class="scroll-quote"
+          data-i18n="quote"
+        >
+          Hər alma bir hekayədir.
+          Hər dişləmə — bir xatirə.
         </blockquote>
 
       </div>
 
-      <div class="vertical-video reveal">
-        <video autoplay muted loop playsinline controls>
-          <source
-            src="assets/videos/almora-harvest.mp4"
-            type="video/mp4">
-        </video>
-      </div>
-
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- PROCESS -->
-  <section class="process section" id="process">
 
-    <div class="container">
+    <!-- ==========================================
+         09 — CHILDHOOD
+    =========================================== -->
 
-      <div class="section-heading reveal">
+    <section class="childhood-section">
 
-        <span
-          class="section-label"
-          data-az="BAĞDAN QUTUYA"
-          data-en="FROM ORCHARD TO BOX"
-          data-ru="ОТ САДА ДО КОРОБКИ">
-          BAĞDAN QUTUYA
-        </span>
+      <div class="childhood-image image-hover">
 
-        <h2
-          data-az="Keyfiyyət təsadüf deyil."
-          data-en="Quality is not accidental."
-          data-ru="Качество — не случайность.">
-          Keyfiyyət təsadüf deyil.
-        </h2>
+        <img
+          src="assets/images/child-apple.jpg"
+          alt="Child enjoying ALMORA apple"
+          loading="lazy"
+        >
+
+        <div class="childhood-glow"></div>
 
       </div>
 
-      <div class="process-layout">
 
-        <div class="process-photo reveal">
+      <div class="page-shell childhood-copy">
 
-          <img
-            src="assets/images/sorting-facility.jpg"
-            alt="Almora sorting facility">
-
-          <div class="process-photo-label">
-            <small
-              data-az="ÇEŞİDLƏMƏ"
-              data-en="SORTING"
-              data-ru="СОРТИРОВКА">
-              ÇEŞİDLƏMƏ
-            </small>
-
-            <strong>ALMORA</strong>
-          </div>
-
+        <div
+          class="section-number light"
+          data-i18n="childhoodNumber"
+        >
+          06 — UŞAQLIQ DADI
         </div>
 
-        <div class="process-steps">
-
-          <div class="process-step reveal">
-            <span>01</span>
-            <div>
-              <h3
-                data-az="Yığım"
-                data-en="Harvest"
-                data-ru="Сбор">
-                Yığım
-              </h3>
-              <p
-                data-az="Yetişmiş meyvə bağdan diqqətlə toplanır."
-                data-en="Ripe fruit is carefully collected from the orchard."
-                data-ru="Созревшие плоды аккуратно собираются в саду.">
-                Yetişmiş meyvə bağdan diqqətlə toplanır.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step reveal">
-            <span>02</span>
-            <div>
-              <h3
-                data-az="Çeşidləmə"
-                data-en="Sorting"
-                data-ru="Сортировка">
-                Çeşidləmə
-              </h3>
-              <p
-                data-az="Məhsul ölçü və keyfiyyət xüsusiyyətlərinə görə ayrılır."
-                data-en="Fruit is separated according to size and quality characteristics."
-                data-ru="Плоды разделяются по размеру и качественным характеристикам.">
-                Məhsul ölçü və keyfiyyət xüsusiyyətlərinə görə ayrılır.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step reveal">
-            <span>03</span>
-            <div>
-              <h3
-                data-az="Soyuducu saxlama"
-                data-en="Cold storage"
-                data-ru="Холодильное хранение">
-                Soyuducu saxlama
-              </h3>
-              <p
-                data-az="Seçilmiş məhsul uyğun şəraitdə soyuducu anbarda saxlanılır."
-                data-en="Selected fruit is stored under suitable conditions in cold storage."
-                data-ru="Отобранная продукция хранится в подходящих условиях в холодильном хранилище.">
-                Seçilmiş məhsul soyuducu anbarda saxlanılır.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step reveal">
-            <span>04</span>
-            <div>
-              <h3
-                data-az="Qablaşdırma"
-                data-en="Packaging"
-                data-ru="Упаковка">
-                Qablaşdırma
-              </h3>
-              <p
-                data-az="Məhsul daşınma və satış üçün hazırlanır."
-                data-en="Fruit is prepared for transport and sale."
-                data-ru="Продукция готовится к транспортировке и продаже.">
-                Məhsul daşınma və satış üçün hazırlanır.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SORTING VIDEO -->
-  <section class="section-dark">
-
-    <div class="container media-grid media-grid-reverse">
-
-      <div class="vertical-video reveal">
-        <video autoplay muted loop playsinline controls>
-          <source
-            src="assets/videos/sorting-process.mp4"
-            type="video/mp4">
-        </video>
-      </div>
-
-      <div class="media-copy reveal">
-
-        <span
-          class="section-label light"
-          data-az="ÇEŞİDLƏMƏ XƏTTİ"
-          data-en="SORTING LINE"
-          data-ru="ЛИНИЯ СОРТИРОВКИ">
-          ÇEŞİDLƏMƏ XƏTTİ
-        </span>
 
         <h2
-          data-az="Seçim təsadüfi deyil."
-          data-en="Selection is never random."
-          data-ru="Отбор никогда не случаен.">
-          Seçim təsadüfi deyil.
+          class="section-title light split-reveal"
+          data-i18n="childhoodTitle"
+        >
+          Bəzi dadlar heç vaxt unudulmur.
         </h2>
 
-        <p
-          data-az="Yığımdan sonra məhsul çeşidləmə xəttinə keçir. Burada alma daha sistemli şəkildə seçilir və növbəti mərhələyə hazırlanır."
-          data-en="After harvest, fruit moves to the sorting line where apples are selected systematically and prepared for the next stage."
-          data-ru="После сбора урожай поступает на линию сортировки, где яблоки системно отбираются и готовятся к следующему этапу.">
-          Yığımdan sonra məhsul çeşidləmə xəttinə keçir.
+
+        <p data-i18n="childhoodText">
+          Bir dişləmə. Bir yay günü. Bir xatirə.
         </p>
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- STORAGE -->
-  <section class="storage section" id="storage">
 
-    <div class="storage-lines"></div>
+    <!-- ==========================================
+         10 — FARM TO YOU BANNER
+    =========================================== -->
 
-    <div class="container storage-inner">
+    <section class="farm-to-you-section">
 
-      <div class="storage-copy reveal">
+      <div class="farm-to-you-visual">
 
-        <span
-          class="section-label storage-label"
-          data-az="SOYUDUCU ANBAR"
-          data-en="COLD STORAGE"
-          data-ru="ХОЛОДИЛЬНОЕ ХРАНИЛИЩЕ">
-          SOYUDUCU ANBAR
-        </span>
+        <img
+          src="assets/images/farm-to-table.png"
+          alt="Bağımızdan sizə"
+          loading="lazy"
+        >
 
-        <h2
-          data-az="Təravət yığımla bitmir."
-          data-en="Freshness does not end at harvest."
-          data-ru="Свежесть не заканчивается сбором.">
-          Təravət yığımla bitmir.
-        </h2>
+      </div>
 
-        <p
-          data-az="Almora-da məhsul yığım və çeşidləmədən sonra soyuducu anbarda saxlanılır. Məqsəd məhsulun keyfiyyətini, görünüşünü və təravətini qorumaqdır."
-          data-en="At Almora, fruit is kept in cold storage after harvest and sorting. The goal is to preserve quality, appearance and freshness."
-          data-ru="В Almora после сбора и сортировки продукция хранится в холодильном хранилище. Цель — сохранить качество, внешний вид и свежесть.">
-          Almora-da məhsul soyuducu anbarda saxlanılır.
-        </p>
+    </section>
 
-        <div class="storage-features">
 
-          <div>
-            <span>01</span>
-            <strong
-              data-az="Təravət"
-              data-en="Freshness"
-              data-ru="Свежесть">
-              Təravət
-            </strong>
+
+    <!-- ==========================================
+         11 — CONTACT
+    =========================================== -->
+
+    <section
+      class="contact-section section"
+      id="contact"
+    >
+
+      <div class="page-shell">
+
+
+        <!-- HEADING -->
+
+        <div class="contact-heading">
+
+          <div
+            class="section-number"
+            data-i18n="contactNumber"
+          >
+            07 — ƏLAQƏ
           </div>
 
-          <div>
-            <span>02</span>
-            <strong
-              data-az="Nəzarətli saxlama"
-              data-en="Controlled storage"
-              data-ru="Контролируемое хранение">
-              Nəzarətli saxlama
-            </strong>
+
+          <h2
+            class="section-title split-reveal"
+            data-i18n="contactTitle"
+          >
+            Bağımızdan sizə.
+          </h2>
+
+
+          <p data-i18n="contactIntro">
+            ALMORA ilə əlaqə saxlayın.
+          </p>
+
+        </div>
+
+
+
+        <div class="contact-grid">
+
+
+          <!-- LEFT -->
+
+          <div class="contact-information">
+
+
+            <!-- ADDRESS -->
+
+            <article class="contact-card">
+
+              <div class="contact-icon">
+
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 21s7-6.1 7-12A7 7 0 1 0 5 9c0 5.9 7 12 7 12Z"
+                  />
+                  <circle cx="12" cy="9" r="2.3"/>
+                </svg>
+
+              </div>
+
+
+              <div>
+
+                <small data-i18n="contactAddressLabel">
+                  Ünvan
+                </small>
+
+                <strong data-i18n="contactAddress">
+                  Aşağı Atuc, Quba, Azərbaycan
+                </strong>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- PHONE -->
+
+            <article class="contact-card">
+
+              <div class="contact-icon">
+
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M7 3h3l1.5 4-2 1.5a15 15 0 0 0 6 6l1.5-2L21 14v3c0 2-1.5 4-4 4C9.3 21 3 14.7 3 7c0-2.5 2-4 4-4Z"
+                  />
+                </svg>
+
+              </div>
+
+
+              <div>
+
+                <small data-i18n="contactPhoneLabel">
+                  Telefon
+                </small>
+
+                <a href="tel:+994557525353">
+                  +994 55 752 53 53
+                </a>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- INSTAGRAM -->
+
+            <article class="contact-card">
+
+              <div class="contact-icon">
+
+                <svg viewBox="0 0 24 24">
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5"
+                  />
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1"/>
+                </svg>
+
+              </div>
+
+
+              <div>
+
+                <small>
+                  Instagram
+                </small>
+
+                <a
+                  href="https://www.instagram.com/almora.az/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @almora.az
+                </a>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- HOURS -->
+
+            <article class="contact-card">
+
+              <div class="contact-icon">
+
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9"/>
+                  <path d="M12 7v6l4 2"/>
+                </svg>
+
+              </div>
+
+
+              <div>
+
+                <small data-i18n="contactHoursLabel">
+                  Əlaqə vaxtı
+                </small>
+
+                <strong data-i18n="contactHours">
+                  Əvvəlcədən əlaqə saxlayın
+                </strong>
+
+              </div>
+
+            </article>
+
+
+
+            <!-- WHATSAPP -->
+
+            <a
+              href="https://wa.me/994557525353"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-whatsapp magnetic"
+            >
+
+              <span data-i18n="whatsappButton">
+                WhatsApp ilə yaz
+              </span>
+
+              <i>↗</i>
+
+            </a>
+
           </div>
 
-          <div>
-            <span>03</span>
-            <strong
-              data-az="Keyfiyyət"
-              data-en="Quality"
-              data-ru="Качество">
-              Keyfiyyət
-            </strong>
-          </div>
+
+
+          <!-- FORM -->
+
+          <form
+            class="contact-form"
+            id="contactForm"
+          >
+
+            <div class="form-group">
+
+              <label
+                for="name"
+                data-i18n="formName"
+              >
+                Adınız
+              </label>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                data-i18n-placeholder="formNamePlaceholder"
+                placeholder="Adınızı yazın"
+              >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+              <label
+                for="phone"
+                data-i18n="formPhone"
+              >
+                Telefon
+              </label>
+
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+                data-i18n-placeholder="formPhonePlaceholder"
+                placeholder="+994"
+              >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+              <label
+                for="message"
+                data-i18n="formMessage"
+              >
+                Mesaj
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                data-i18n-placeholder="formMessagePlaceholder"
+                placeholder="Mesajınızı yazın"
+              ></textarea>
+
+            </div>
+
+
+
+            <button
+              type="submit"
+              class="button button-red form-submit magnetic"
+            >
+
+              <span data-i18n="formSubmit">
+                Mesaj göndər
+              </span>
+
+              <i>↗</i>
+
+            </button>
+
+          </form>
+
+        </div>
+
+
+
+        <!-- MAP -->
+
+        <div class="map-block">
+
+          <iframe
+            title="ALMORA location"
+            loading="lazy"
+            src="https://www.google.com/maps?q=41.4593543,48.5551978&z=14&output=embed"
+          ></iframe>
+
+
+          <a
+            href="https://www.google.com/maps?q=41.4593543,48.5551978"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-direction-button magnetic"
+          >
+
+            <span data-i18n="directions">
+              Yol tarifi
+            </span>
+
+            <i>↗</i>
+
+          </a>
 
         </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
-
-
-  <!-- MANIFESTO -->
-  <section class="manifesto">
-
-    <div class="container">
-
-      <p class="manifesto-small">ALMORA</p>
-
-      <h2
-        class="reveal"
-        data-az="Yığım son deyil. Keyfiyyətin növbəti mərhələsidir."
-        data-en="Harvest is not the end. It is the next stage of quality."
-        data-ru="Сбор урожая — не конец. Это следующий этап качества.">
-        Yığım son deyil. Keyfiyyətin növbəti mərhələsidir.
-      </h2>
-
-    </div>
-
-  </section>
+  </main>
 
 
-  <!-- LOCATION -->
-  <section class="location section">
 
-    <div class="container location-grid">
+  <!-- ==========================================
+       FOOTER
+  =========================================== -->
 
-      <div class="location-copy reveal">
+  <footer class="site-footer">
 
-        <span
-          class="section-label"
-          data-az="BİZİ TAP"
-          data-en="FIND US"
-          data-ru="НАЙТИ НАС">
-          BİZİ TAP
-        </span>
-
-        <h2
-          data-az="Almora haradan başlayır?"
-          data-en="Where does Almora begin?"
-          data-ru="Где начинается Almora?">
-          Almora haradan başlayır?
-        </h2>
-
-        <p>Aşağı Atuc • Quba • Azərbaycan</p>
-
-        <p class="coordinates">
-          41.4593543<br>
-          48.5551978
-        </p>
-
-        <a
-          href="https://www.google.com/maps?q=41.4593543,48.5551978"
-          target="_blank"
-          class="btn btn-red"
-          data-az="Google Maps-də aç"
-          data-en="Open in Google Maps"
-          data-ru="Открыть в Google Maps">
-          Google Maps-də aç
-        </a>
-
-      </div>
-
-      <a
-        href="https://www.google.com/maps?q=41.4593543,48.5551978"
-        target="_blank"
-        class="map-card reveal">
-
-        <div class="map-lines"></div>
-
-        <span class="map-pin">
-          <span></span>
-        </span>
-
-        <strong>ALMORA</strong>
-        <small>QUBA</small>
-
-      </a>
-
-    </div>
-
-  </section>
+    <div class="page-shell">
 
 
-  <!-- CONTACT -->
-  <section class="contact section" id="contact">
-
-    <div class="container contact-card">
-
-      <div class="contact-copy reveal">
-
-        <span
-          class="section-label"
-          data-az="ƏLAQƏ"
-          data-en="CONTACT"
-          data-ru="КОНТАКТЫ">
-          ƏLAQƏ
-        </span>
-
-        <h2
-          data-az="Bağdan sizə. Bir mesaj qədər yaxın."
-          data-en="From our orchard to you. One message away."
-          data-ru="От нашего сада к вам. Всего одно сообщение.">
-          Bağdan sizə. Bir mesaj qədər yaxın.
-        </h2>
-
-      </div>
-
-      <div class="contact-links reveal">
-
-        <a href="tel:+994557525353">
-          <small
-            data-az="Telefon"
-            data-en="Phone"
-            data-ru="Телефон">
-            Telefon
-          </small>
-          <strong>+994 55 752 53 53</strong>
-          <span>→</span>
-        </a>
-
-        <a
-          href="https://wa.me/994557525353"
-          target="_blank">
-          <small>WhatsApp</small>
-          <strong
-            data-az="Mesaj yaz"
-            data-en="Send message"
-            data-ru="Написать">
-            Mesaj yaz
-          </strong>
-          <span>→</span>
-        </a>
-
-        <a
-          href="https://www.instagram.com/almora.az/"
-          target="_blank">
-          <small>Instagram</small>
-          <strong>@almora.az</strong>
-          <span>→</span>
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer class="footer">
-
-    <div class="container footer-main">
-
-      <div class="footer-logo">
-        <span class="logo-symbol">
-          <span class="logo-heart">♥</span>
-        </span>
+      <div class="footer-wordmark">
         ALMORA
       </div>
 
-      <div class="footer-nav">
-        <a href="#story"
-           data-az="Hekayəmiz"
-           data-en="Our Story"
-           data-ru="Наша история">
-          Hekayəmiz
-        </a>
 
-        <a href="#apples"
-           data-az="Almalar"
-           data-en="Apples"
-           data-ru="Яблоки">
-          Almalar
-        </a>
 
-        <a href="#process"
-           data-az="Proses"
-           data-en="Process"
-           data-ru="Процесс">
-          Proses
-        </a>
+      <div class="footer-main">
 
-        <a href="#contact"
-           data-az="Əlaqə"
-           data-en="Contact"
-           data-ru="Контакты">
-          Əlaqə
-        </a>
+
+        <div class="footer-tagline">
+
+          <span data-i18n="footerTagline">
+            Bağımızdan sizə
+          </span>
+
+        </div>
+
+
+
+        <div class="footer-contact">
+
+          <p data-i18n="contactAddress">
+            Aşağı Atuc, Quba, Azərbaycan
+          </p>
+
+          <a href="tel:+994557525353">
+            +994 55 752 53 53
+          </a>
+
+        </div>
+
+
+
+        <div class="footer-socials">
+
+          <a
+            href="https://www.instagram.com/almora.az/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+
+            <svg viewBox="0 0 24 24">
+              <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="5"
+              />
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1"/>
+            </svg>
+
+          </a>
+
+        </div>
+
       </div>
 
-    </div>
 
-    <div class="container footer-bottom">
-      <span>© 2026 ALMORA</span>
-      <span>Aşağı Atuc • Quba • Azərbaycan</span>
+
+      <div class="footer-bottom">
+
+        <span
+          data-i18n="copyright"
+        >
+          © 2026 ALMORA. Bütün hüquqlar qorunur.
+        </span>
+
+
+        <div class="footer-coordinates">
+
+          <span>
+            41.459354° N
+          </span>
+
+          <span>
+            48.555198° E
+          </span>
+
+        </div>
+
+      </div>
+
     </div>
 
   </footer>
 
 
+
+  <!-- ==========================================
+       FLOATING WHATSAPP
+  =========================================== -->
+
+  <a
+    href="https://wa.me/994557525353"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-whatsapp"
+    aria-label="WhatsApp"
+  >
+
+    <svg viewBox="0 0 24 24">
+
+      <path
+        d="M20 11.7A8 8 0 0 1 8.2 18.8L4 20l1.2-4A8 8 0 1 1 20 11.7Z"
+      />
+
+      <path
+        d="M8.3 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.4l.8 2c.1.3.1.5-.1.7l-.6.7c-.2.2-.2.4 0 .7a7 7 0 0 0 3.2 2.8c.3.2.5.1.7-.1l.8-1c.2-.3.5-.3.7-.2l2 .9c.3.1.4.3.4.5a3 3 0 0 1-.5 1.5c-.4.6-1.2 1-2 1a9.6 9.6 0 0 1-4.5-1.5 10.7 10.7 0 0 1-4-4.3c-.6-1.2-.6-2.4-.1-3.2Z"
+      />
+
+    </svg>
+
+  </a>
+
+
+
+  <!-- ==========================================
+       LIBRARIES
+  =========================================== -->
+
+  <!-- GSAP -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+  ></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  ></script>
+
+
+  <!-- Three.js -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"
+  ></script>
+
+
+  <!-- Lenis -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"
+  ></script>
+
+
+  <!-- SplitType -->
+  <script
+    src="https://unpkg.com/split-type"
+  ></script>
+
+
+  <!-- OUR JS -->
   <script src="script.js"></script>
 
 </body>
